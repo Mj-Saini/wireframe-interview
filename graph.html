@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="my-5 py-5">
-      <div class="container_custom container mx-auto border_wireframe1 p-0">
+      <div class="container_custom container mx-auto border_wireframe p-0">
         <div
           class="d-flex flex-wrap justify-content-between align-items-center border_radius_8 py-4 px-2"
         >
@@ -44,7 +44,7 @@
               aria-label="Search For Contract"
             />
 
-            <div class="btn-group p-1 border_wireframe1 light_white_bg">
+            <div class="btn-group p-1 border_wireframe light_white_bg">
               <button
                 id="button1"
                 type="button"
@@ -76,6 +76,211 @@
             </div>
           </div>
         </div>
+        <div class="row flex-wrap border_wireframe rounded-0">
+          <div class="col-12 col-lg-6">
+            <div class="py-2">
+              <div class="d-flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  class="btn orange_border py-1 fw_medium text_md text_light_orange border_radius_full"
+                >
+                  Pay-Off Graph
+                </button>
+                <button
+                  type="button"
+                  class="btn light_white_bg py-1 ms-1 fw_medium text_md text_light_orange border_radius_full"
+                >
+                  Pay-Off Table
+                </button>
+              </div>
+              <div class="d-flex flex-column gap-2 mt-2 pt-1">
+                <div class="d-flex align-items-center gap-3">
+                  <span class="fw-normal text_sm text_light_black d-flex"
+                    >Legends :
+                  </span>
+                  <div class="d-flex gap-2">
+                    <h2 class="fw-normal text_sm text_light_black d-flex gap-1">
+                      <span class="green_line d-flex"></span>-1sd & +1sd
+                    </h2>
+                    <h2 class="fw-normal text_sm text_light_black d-flex gap-1">
+                      <span class="orange_line d-flex"></span> -2sd & +2sd
+                    </h2>
+                    <h2 class="fw-normal text_sm text_light_black d-flex gap-1">
+                      <span class="light_blue_line d-flex"></span>Mkt Exp.
+                    </h2>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-3 mt-1">
+                  <span class="fw-normal text_sm text_light_black d-flex"
+                    >Levels :
+                  </span>
+                  <div class="d-flex gap-2">
+                    <h2 class="fw-normal text_sm text_light_black d-flex gap-1">
+                      <span class="black_line d-flex"></span>PNL
+                    </h2>
+                    <h2 class="fw-normal text_sm text_light_black d-flex gap-1">
+                      <span class="yellow_line d-inline-block"></span>Expiry
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 border_l">
+            <div class="overflow-auto custom_width py-2">
+              <div class="border_bottom pb-2">
+                <h2 class="fw_medium text_md text_light_black pt-2">Summary</h2>
+                <div class="d-flex flex-wrap justify-content-between mt-3">
+                  <div class="flex flex-column gap-1 col-6">
+                    <h2 class="fw-normal text_md text_gray">Max Profit</h2>
+                    <p class="fw-normal text_md text_green">Unlimited</p>
+                  </div>
+                  <div class="flex flex-column gap-1 col-6">
+                    <h2 class="fw-normal text_md text_gray">Max Loss</h2>
+                    <p class="fw-normal text_md text_orange">-54,750</p>
+                  </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between mt-2">
+                  <div class="flex flex-column gap-1 col-6">
+                    <h2 class="fw-normal text_md text_gray">
+                      Breakeven at Expiry
+                    </h2>
+                    <p class="fw-normal text_md text_light_black">17547.5</p>
+                  </div>
+                  <div class="flex flex-column gap-1 col-6">
+                    <h2 class="fw-normal text_md text_gray">
+                      Probability of Profit
+                    </h2>
+                    <p class="fw-normal text_md text_light_black">53%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="border_bottom pb-2 mt-3">
+                <h2 class="fw_medium text_md text_light_black pt-2">Greeks</h2>
+                <div class="d-flex flex-wrap justify-content-between mt-3">
+                  <div class="flex flex-column gap-1 col-6">
+                    <h2 class="fw-normal text_md text_gray">
+                      Delta
+                      <img
+                        src="/assets/image/svg/question-mark.svg"
+                        alt="question-mark"
+                      />
+                    </h2>
+                    <p class="fw-normal text_md text_light_black">0</p>
+                  </div>
+                  <div class="flex flex-column gap-1 col-6">
+                    <h2 class="fw-normal text_md text_gray">
+                      Gamma<img
+                        src="/assets/image/svg/question-mark.svg"
+                        alt="question-mark"
+                      />
+                    </h2>
+                    <p class="fw-normal text_md text_light_black">0.006</p>
+                  </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between mt-2">
+                  <div class="flex flex-column gap-1 col-6">
+                    <h2 class="fw-normal text_md text_gray">
+                      Theta<img
+                        src="/assets/image/svg/question-mark.svg"
+                        alt="question-mark"
+                      />
+                    </h2>
+                    <p class="fw-normal text_md text_light_black">-13</p>
+                  </div>
+                  <div class="flex flex-column gap-1 col-6">
+                    <h2 class="fw-normal text_md text_gray">
+                      Vega<img
+                        src="/assets/image/svg/question-mark.svg"
+                        alt="question-mark"
+                      />
+                    </h2>
+                    <p class="fw-normal text_md text_light_black">2</p>
+                  </div>
+                </div>
+              </div>
+              <div class="border_bottom pb-2 mt-3">
+                <h2 class="fw_medium text_md text_light_black pt-2">IVs</h2>
+                <div class="d-flex flex-wrap justify-content-between mt-3">
+                  <div class="d-flex w-100 justify-content-between gap-1">
+                    <h2 class="fw-normal text_md text_gray">17000</h2>
+                    <h2 class="fw-normal text_md text_gray">23 Sep</h2>
+                    <div class="d-flex align-items-center value_inc_dcs">
+                      <span
+                        class="d-flex align-items-center justify-content-center"
+                        >-</span
+                      >
+                      <h2
+                        class="fw-normal text_sm text_light_black border_x d-flex px-3"
+                      >
+                        24.7
+                      </h2>
+                      <span
+                        class="d-flex align-items-center justify-content-center"
+                        >+</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between mt-3">
+                  <div class="d-flex w-100 justify-content-between gap-1">
+                    <h2 class="fw-normal text_md text_gray">17000</h2>
+                    <h2 class="fw-normal text_md text_gray">23 Sep</h2>
+                    <div class="d-flex align-items-center value_inc_dcs">
+                      <span
+                        class="d-flex align-items-center justify-content-center"
+                        >-</span
+                      >
+                      <h2
+                        class="fw-normal text_sm text_light_black border_x d-flex px-3"
+                      >
+                        24.7
+                      </h2>
+                      <span
+                        class="d-flex align-items-center justify-content-center"
+                        >+</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer id="footer">
+          <div class="px-3 py-2 d-flex flex-wrap gap-3 justify-content-between">
+            <div class="d-flex gap-5">
+              <div>
+                <h2 class="fw-normal text_md text_light_black">
+                  Required Margin
+                  <img src="/assets/image/svg/info-icon.svg" alt="info" />
+                </h2>
+                <p class="fw_medium text_base text_light_black">₹3794.50</p>
+              </div>
+              <div>
+                <h2 class="fw-normal text_md text_light_black">
+                  Required Margin
+                  <img src="/assets/image/svg/info-icon.svg" alt="info" />
+                </h2>
+                <p class="fw_medium text_base text_light_black">₹3794.50</p>
+              </div>
+            </div>
+            <div class="d-flex gap-3">
+              <button
+                type="button"
+                class="btn border_green text_green fw_medium text_base p-2 transition_03"
+              >
+                Save
+              </button>
+              <button
+                type="button"
+                class="btn border_green text_green fw_medium text_base p-2 transition_03"
+              >
+                Place Order
+              </button>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
 

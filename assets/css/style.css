@@ -53,7 +53,7 @@
 /* ==== FONT WEIGHT ==== */
 
 .fw_medium {
-    font-weight: var(--fw-medium);
+    font-weight: var(--fw-medium) !important;
 }
 
 /* ==== TEXT COLOR CLASS START ==== */
@@ -86,6 +86,7 @@
 .light_white_bg {
     background: var(--light-white) !important;
 }
+
 .bg_green {
     background: var(--green) !important;
 }
@@ -110,13 +111,74 @@
 
 }
 
-.border_wireframe1 {
+.border_wireframe {
     border: 1px solid #DCDCDC;
     border-radius: 8px;
 }
 
+.border_bottom {
+    border-bottom: 1px solid #DCDCDC
+}
+
+.border_radius_full {
+    border-radius: 1000px !important;
+}
+
+.border_l {
+    border-left: 1px solid #DCDCDC
+}
+
+.value_inc_dcs {
+    border: 0.5px solid #80878E;
+    border-radius: 4px;
+}
+
+.value_inc_dcs span {
+    width: 18px;
+    height: 18px;
+}
+
+.value_inc_dcs h2 {
+    height: 100%;
+    padding-top: 2px !important;
+}
+
+.border_x {
+    border-left: 0.5px solid #80878E;
+    border-right: 0.5px solid #80878E
+}
+
+;
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.custom_width {
+    height: 380px;
+}
+
 .orange_border {
     border: 1px solid var(--light-orange) !important;
+}
+
+.border_green {
+    border: 1px solid var(--green) !important;
+}
+
+#footer .border_green:hover {
+    border: 1px solid transparent !important;
+    background: var(--green) !important;
+    color: white !important;
+}
+
+#footer {
+    box-shadow: 0px 4px 4px 0px #00000040;
+    border-radius: 8px;
+}
+
+.transition_03 {
+    transition: all .3s ease-in-out;
 }
 
 input[type="checkbox"] {
@@ -156,6 +218,37 @@ input:focus-visible {
 
 .cursor_pointer {
     cursor: pointer;
+}
+
+/* WIREFRAME 2 CSS */
+.green_line {
+    border-bottom: 2px solid var(--green);
+    width: 10px;
+    height: 12px;
+}
+
+.orange_line {
+    border-bottom: 2px solid #DB6A3A;
+    width: 10px;
+    height: 12px;
+}
+
+.light_blue_line {
+    border-bottom: 2px solid #03A9F5;
+    width: 10px;
+    height: 12px;
+}
+
+.yellow_line {
+    border-bottom: 2px #EAB222;
+    width: 10px;
+    height: 12px;
+}
+
+.black_line {
+    border-bottom: 2px #353535;
+    width: 10px;
+    height: 12px;
 }
 
 @media (min-width:1198px) {
