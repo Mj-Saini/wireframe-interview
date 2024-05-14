@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0 !important;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    font-family: "Roboto", sans-serif;
+}
+
+
+/* ==== ROOT START ==== */
+:root {
+    /* ==== FONT-SIZES ==== */
+    --font-xs: 10px;
+    --font-sm: 12px;
+    --font-md: 14px;
+    --font-base: 16px;
+    /* ==== COLOR-CLASS ==== */
+    --light-black: #353535;
+    --green: #34c758;
+    --dark-gray: #dcdcdc;
+    --orange: #fe3c30;
+    --light-orange: #e77817;
+    --gray: #80878e;
+    --light-white: #F5F6F7;
+
+    /* ==== FONT WEIGHT ==== */
+    --fw-medium: 500;
+}
+
+/* ==== FONT-SIZE CLASS START ===== */
+
+.text_xs {
+    font-size: var(--font-xs) !important;
+}
+
+.text_sm {
+    font-size: var(--font-sm) !important;
+}
+
+.text_md {
+    font-size: var(--font-md) !important;
+}
+
+.text_base {
+    font-size: var(--font-base) !important;
+}
+
+
+
+/* ==== FONT WEIGHT ==== */
+
+.fw_medium {
+    font-weight: var(--fw-medium);
+}
+
+/* ==== TEXT COLOR CLASS START ==== */
+
+.text_green {
+    color: var(--green) !important;
+}
+
+.text_light_black {
+    color: var(--light-black) !important;
+}
+
+.text_dark_gray {
+    color: var(--dark-gray) !important;
+}
+
+.text_orange {
+    color: var(--orange) !important;
+}
+
+.text_light_orange {
+    color: var(--light-orange) !important;
+}
+
+.text_gray {
+    color: var(--gray) !important;
+}
+
+/* bg-color */
+.light_white_bg {
+    background: var(--light-white) !important;
+}
+.bg_green {
+    background: var(--green) !important;
+}
+
+.btn-toggle {
+    cursor: pointer;
+    border-radius: 8px !important;
+    border: 2px solid transparent !important;
+}
+
+.btn-toggle.active {
+    color: var(--light-orange);
+    border: 2px solid #E77817 !important;
+}
+
+.btn-toggle.disabled {
+    pointer-events: none;
+}
+
+.header_border {
+    border-bottom: 1px solid #DCDCDC;
+
+}
+
+.border_wireframe1 {
+    border: 1px solid #DCDCDC;
+    border-radius: 8px;
+}
+
+.orange_border {
+    border: 1px solid var(--light-orange) !important;
+}
+
+input[type="checkbox"] {
+    border: 1.5px solid #C4C8CD;
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox-column {
+    width: 18px;
+    /* Adjust this value to your preference */
+}
+
+.inner_shadow {
+    box-shadow: 0px 2px 4px 0px #00000040 inset;
+}
+
+input:focus-visible {
+    outline: none !important;
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+    outline: 0;
+    box-shadow: none !important
+}
+
+.table>thead {
+    vertical-align: top;
+}
+
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: var(--dark-gray) !important;
+}
+
+
+
+.cursor_pointer {
+    cursor: pointer;
+}
+
+@media (min-width:1198px) {
+    .container_custom {
+        max-width: 1140px !important;
+    }
+}
