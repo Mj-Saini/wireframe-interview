@@ -1,7 +1,7 @@
 function toggleButton(activeButtonId, disabledButtonId) {
   var activeButton = document.getElementById(activeButtonId);
   var disabledButton = document.getElementById(disabledButtonId);
-
+  toggleSecondRow()
   if (!activeButton.classList.contains("active")) {
     activeButton.classList.add("active");
     disabledButton.classList.remove("active");
@@ -20,3 +20,13 @@ function toggleButton(activeButtonId, disabledButtonId) {
       });
     });
   });
+
+// show table row
+function toggleSecondRow() {
+  var secondRow = document.getElementById("secondRow");
+  if (secondRow.style.display === "none") {
+      secondRow.style.display = "table-row";
+  } else {
+      secondRow.style.display = "none";
+  }
+}

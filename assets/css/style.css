@@ -95,6 +95,10 @@
     background: var(--orange) !important;
 }
 
+.bg_darkGray {
+    background: var(--dark-gray) !important;
+}
+
 .btn-toggle-normal {
     cursor: pointer;
     border-radius: 999px !important;
@@ -187,6 +191,11 @@
 .border_green {
     border: 1px solid var(--green) !important;
 }
+.prize_limit{
+    border: 1px solid #DCDCDC;
+    border-radius: 8px;
+    background: #DCDCDC;
+}
 
 #footer .border_green:hover {
     border: 1px solid transparent !important;
@@ -272,7 +281,12 @@ input:focus-visible {
     width: 10px;
     height: 12px;
 }
-
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
 
 @media (min-width:1198px) {
     .container_custom {
