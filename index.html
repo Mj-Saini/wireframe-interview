@@ -38,9 +38,11 @@
     <button id="button1" type="button" class="btn btn-toggle active" onclick="toggleButton('button1', 'button2')">
         Basket
     </button>
-    <button id="button2" type="button" class="btn btn-toggle " onclick="toggleButton('button2', 'button1')">
+    <a href="http://127.0.0.1:5500/graph.html">
+      <button id="button2" type="button" class="btn btn-toggle " onclick="toggleButton('button2', 'button1')">
         Pay-off Analyzer
     </button>
+    </a>
 </div>
             </div>
           </div>
@@ -65,25 +67,25 @@
           <thead>
             <tr class="spacing">
               <th scope="col">
-                <div class="d-flex gap-2 fw-normal text_md gray_shade"><input type="checkbox" name="Underlying"
+                <div class="d-flex gap-2 fw-normal text_md text_gray"><input type="checkbox" name="Underlying"
                     height="24" width="24">Underlying
                 </div>
               </th>
-              <th scope="col" class="fw-normal text_md gray_shade">
+              <th scope="col" class="fw-normal text_md text_gray">
                 B/S </th>
-              <th scope="col" class="fw-normal text_md gray_shade">
+              <th scope="col" class="fw-normal text_md text_gray">
                 Expiry </th>
-              <th scope="col" class="fw-normal text_md gray_shade">
+              <th scope="col" class="fw-normal text_md text_gray">
                 Strike </th>
-              <th scope="col" class="fw-normal text_md gray_shade">
+              <th scope="col" class="fw-normal text_md text_gray">
                 CE/PE </th>
-              <th scope=" col" class="fw-normal text_md gray_shade">
+              <th scope=" col" class="fw-normal text_md text_gray">
                 Qty </th>
-              <th scope="col" class="fw-normal text_md gray_shade">
+              <th scope="col" class="fw-normal text_md text_gray">
                 Price </th>
-              <th scope="col" class="fw-normal text_md gray_shade">
+              <th scope="col" class="fw-normal text_md text_gray">
                 Product</th>
-              <th scope="col" class="fw-normal text_md gray_shade">
+              <th scope="col" class="fw-normal text_md text_gray">
                 Action </th>
             </tr>
           </thead>
@@ -101,16 +103,16 @@
                 <td>
                   <select name="date" class=" fw-medium text_md text_light_black">
                     <option value="20-FEB-2024">20-FEB-2024</option>
-                    <option value="20-FEB-2024">20-FEB-2024</option>
-                    <option value="20-FEB-2024">20-FEB-2024</option>
+                    <option value="20-FEB-2024">21-FEB-2024</option>
+                    <option value="20-FEB-2024">28-FEB-2024</option>
                   </select>
                 </td>
                 <td>
                   <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
-                    <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
+                    <span class="px-1 py-2" ><img src="/assets/image/svg/minus.svg"
                         alt="decrease-icon"></span>
                     <span id="counter" class="fw-medium text_md text_light_black">22000</span>
-                    <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
+                    <span class="px-1 py-2" ><img src="/assets/image/svg/Plus.svg"
                         alt="decrease-icon"></span>
                   </div>
                 </td>
@@ -119,10 +121,10 @@
                 </td>
                 <td>
                   <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
-                    <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
+                    <span class="px-1 py-2" ><img src="/assets/image/svg/minus.svg"
                         alt="decrease-icon"></span>
                     <span id="counter" class="fw-medium text_md text_light_black">1000</span>
-                    <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
+                    <span class="px-1 py-2" ><img src="/assets/image/svg/Plus.svg"
                         alt="decrease-icon"></span>
                   </div>
                 </td>
@@ -142,10 +144,10 @@
                     </div>
                     <div style="width: 130px;height: 35px; height: 35px;"
                       class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
-                      <span class="p-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
+                      <span class="p-2" ><img src="/assets/image/svg/minus.svg"
                           alt="decrease-icon"></span>
                       <span id="counter">400.50</span>
-                      <span class="p-2 " onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
+                      <span class="p-2 " ><img src="/assets/image/svg/Plus.svg"
                           alt="increase-icon"></span>
                     </div>
                   </div>
@@ -207,14 +209,16 @@
           <td>
             <select name="date" class="fw-medium text_md text_light_black">
               <option value="20-FEB-2024">20-FEB-2024</option>
+                    <option value="20-FEB-2024">21-FEB-2024</option>
+                    <option value="20-FEB-2024">28-FEB-2024</option>
             </select>
           </td>
           <td>
             <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
-              <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
+              <span class="px-1 py-2" ><img src="/assets/image/svg/minus.svg"
                   alt="decrease-icon"></span>
               <span id="counter" class="fw-medium text_md text_light_black">22000</span>
-              <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
+              <span class="px-1 py-2" ><img src="/assets/image/svg/Plus.svg"
                   alt="decrease-icon"></span>
             </div>
           </td>
@@ -223,10 +227,10 @@
           </td>
           <td>
             <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
-              <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
+              <span class="px-1 py-2" ><img src="/assets/image/svg/minus.svg"
                   alt="decrease-icon"></span>
               <span id="counter" class="fw-medium text_md text_light_black">1000</span>
-              <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
+              <span class="px-1 py-2" ><img src="/assets/image/svg/Plus.svg"
                   alt="decrease-icon"></span>
             </div>
           </td>
@@ -246,10 +250,10 @@
               </div>
               <div style="width: 130px;height: 35px;"
                 class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
-                <span class="p-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
+                <span class="p-2" ><img src="/assets/image/svg/minus.svg"
                     alt="decrease-icon"></span>
                 <span id="counter">400.50</span>
-                <span class="p-2 " onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
+                <span class="p-2 " ><img src="/assets/image/svg/Plus.svg"
                     alt="increase-icon"></span>
               </div>
             </div>
@@ -310,14 +314,16 @@
         <td>
           <select name="date" class="fw-medium text_md text_light_black bg_darkGray">
             <option value="20-FEB-2024">20-FEB-2024</option>
+                    <option value="20-FEB-2024">21-FEB-2024</option>
+                    <option value="20-FEB-2024">28-FEB-2024</option>
           </select>
         </td>
         <td>
           <div style="height: 35px;" class="d-flex border border-light_gray bg_darkGray rounded-2 align-items-center justify-content-around">
-            <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
+            <span class="px-1 py-2" ><img src="/assets/image/svg/minus.svg"
                 alt="decrease-icon"></span>
             <span id="counter" class="fw-medium text_md text_light_black">22000</span>
-            <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
+            <span class="px-1 py-2" ><img src="/assets/image/svg/Plus.svg"
                 alt="decrease-icon"></span>
           </div>
         </td>
@@ -326,10 +332,10 @@
         </td>
         <td>
           <div  style="height: 35px;" class="d-flex border border-light_gray bg_darkGray rounded-2 align-items-center justify-content-around">
-            <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
+            <span class="px-1 py-2" ><img src="/assets/image/svg/minus.svg"
                 alt="decrease-icon"></span>
             <span id="counter" class="fw-medium text_md text_light_black">1000</span>
-            <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
+            <span class="px-1 py-2" ><img src="/assets/image/svg/Plus.svg"
                 alt="decrease-icon"></span>
           </div>
         </td>
@@ -338,10 +344,10 @@
             <span class="fw-normal text_md text_gray">SLTP</span>
             <div style="width: 130px;height: 35px;"
               class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
-              <span class="p-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
+              <span class="p-2" ><img src="/assets/image/svg/minus.svg"
                   alt="decrease-icon"></span>
               <span id="counter">350.00</span>
-              <span class="p-2 " onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
+              <span class="p-2 " ><img src="/assets/image/svg/Plus.svg"
                   alt="increase-icon"></span>
             </div>
           </div>
@@ -368,14 +374,16 @@
       <td>
         <select name="date" class="fw-medium text_md text_light_black">
           <option value="20-FEB-2024">20-FEB-2024</option>
+                    <option value="20-FEB-2024">21-FEB-2024</option>
+                    <option value="20-FEB-2024">28-FEB-2024</option>
         </select>
       </td>
       <td>
         <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
-          <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
+          <span class="px-1 py-2" ><img src="/assets/image/svg/minus.svg"
               alt="decrease-icon"></span>
           <span id="counter" class="fw-medium text_md text_light_black">22000</span>
-          <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
+          <span class="px-1 py-2" ><img src="/assets/image/svg/Plus.svg"
               alt="decrease-icon"></span>
         </div>
       </td>
@@ -384,10 +392,10 @@
       </td>
       <td>
         <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
-          <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
+          <span class="px-1 py-2" ><img src="/assets/image/svg/minus.svg"
               alt="decrease-icon"></span>
           <span id="counter" class="fw-medium text_md text_light_black">1000</span>
-          <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
+          <span class="px-1 py-2" ><img src="/assets/image/svg/Plus.svg"
               alt="decrease-icon"></span>
         </div>
       </td>
@@ -407,10 +415,10 @@
           </div>
           <div style="width: 130px; height: 35px;"
             class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
-            <span class="p-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
+            <span class="p-2" ><img src="/assets/image/svg/minus.svg"
                 alt="decrease-icon"></span>
             <span id="counter">400.50</span>
-            <span class="p-2 " onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
+            <span class="p-2 " ><img src="/assets/image/svg/Plus.svg"
                 alt="increase-icon"></span>
           </div>
         </div>
@@ -471,15 +479,16 @@
       <td>
         <select name="date" class="fw-medium text_md text_light_black">
           <option value="20-FEB-2024">20-FEB-2024</option>
-          <option value="20-FEB-2024">20-FEB-2024</option>
+                    <option value="20-FEB-2024">21-FEB-2024</option>
+                    <option value="20-FEB-2024">28-FEB-2024</option>
         </select>
       </td>
       <td>
         <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
-          <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
+          <span class="px-1 py-2" ><img src="/assets/image/svg/minus.svg"
               alt="decrease-icon"></span>
           <span id="counter" class="fw-medium text_md text_light_black">22000</span>
-          <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
+          <span class="px-1 py-2" ><img src="/assets/image/svg/Plus.svg"
               alt="decrease-icon"></span>
         </div>
       </td>
@@ -488,10 +497,10 @@
       </td>
       <td>
         <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
-          <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
+          <span class="px-1 py-2" ><img src="/assets/image/svg/minus.svg"
               alt="decrease-icon"></span>
           <span id="counter" class="fw-medium text_md text_light_black">1000</span>
-          <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
+          <span class="px-1 py-2" ><img src="/assets/image/svg/Plus.svg"
               alt="decrease-icon"></span>
         </div>
       </td>
@@ -511,10 +520,10 @@
           </div>
           <div style="width: 130px; height: 35px; height: 35px;"
             class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
-            <span class="p-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
+            <span class="p-2" ><img src="/assets/image/svg/minus.svg"
                 alt="decrease-icon"></span>
             <span id="counter">400.50</span>
-            <span class="p-2 " onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
+            <span class="p-2 " ><img src="/assets/image/svg/Plus.svg"
                 alt="increase-icon"></span>
           </div>
         </div>
@@ -572,19 +581,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
   </script>
-  <script>
-    let counter = 0;
-
-    function incrementCounter() {
-      counter++;
-      document.getElementById("counter").innerHTML = counter;
-    }
-
-    function decrementCounter() {
-      counter--;
-      document.getElementById("counter").innerHTML = counter;
-    }
-  </script>
+ 
   </div>
   </div>
 
