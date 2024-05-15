@@ -341,7 +341,7 @@ input:focus-visible {
 .cross {
     display: none !important;
 }
-
+}
 @media (min-width:574.98px) {
     .header_responsive {
         position: fixed;
