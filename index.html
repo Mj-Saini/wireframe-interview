@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>wireframe</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/wireframe2.css">
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,7 +16,8 @@
   </head>
 
   <body>
-    <div class="py-4 px-4">
+    <div class="py-4 overflow-hidden">
+
       <div class="border_wireframe p-0">
         <div
           class="d-flex flex-wrap justify-content-between align-items-center border_radius_8 py-4 px-2"
@@ -77,84 +80,542 @@
             </div>
           </div>
         </div>
-        <div class="inner_shadow">
-          <table class="table">
-            <thead class="thead-light">
-              <tr>
-                <th class="checkbox-column" scope="col">
-                  <input class="pt-2" type="checkbox" />
-                </th>
-                <th scope="col" class="fw-normal text_md text_gray ps-0">
-                  Underlying
-                </th>
-                <th scope="col" class="fw-normal text_md text_gray">B/S</th>
-                <th scope="col" class="fw-normal text_md text_gray">Expiry</th>
-                <th scope="col" class="fw-normal text_md text_gray">Strike</th>
-                <th scope="col" class="fw-normal text_md text_gray">CE/PE</th>
-                <th scope="col" class="fw-normal text_md text_gray">Qty</th>
-                <th scope="col" class="fw-normal text_md text_gray">Price</th>
-                <th scope="col" class="fw-normal text_md text_gray">Product</th>
-                <th scope="col" class="fw-normal text_md text_gray">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">
-                  <span class="pt-2"> <input type="checkbox" /></span>
-                </th>
-                <td class="fw-normal text_base text_light_black ps-0">
-                  CNXBAN
-                </td>
-                <td class="fw-normal text_base text_light_black">
-                  <button
-                    type="button"
-                    class="btn text-uppercase bg_green border-0"
-                  >
-                    b
-                  </button>
-                </td>
-                <td class="fw-normal text_base text_light_black">
-                  <div class="dropdown">
-                    <button
-                      class="btn btn-secondary dropdown-toggle"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Dropdown
+           <!-- -------------table-headings---------- -->
+            <div class="overflow-scroll">
+                <table id="dataTable" class="table table-striped table-hover table_inner_shadow ">
+                    <thead>
+                        <tr class="spacing">
+                            <th scope="col">
+                                <div class="d-flex gap-2 fw-normal text_md gray_shade"><input type="checkbox"
+                                        name="Underlying"  height="24" width="24">Underlying
+                                </div>
+                            </th>
+                            <th scope="col" class="fw-normal text_md gray_shade">
+                                B/S </th>
+                            <th scope="col" class="fw-normal text_md gray_shade">
+                                Expiry </th>
+                            <th scope="col" class="fw-normal text_md gray_shade">
+                                Strike </th>
+                            <th scope="col" class="fw-normal text_md gray_shade">
+                                CE/PE </th>
+                            <th scope=" col" class="fw-normal text_md gray_shade">
+                                Qty </th>
+                            <th scope="col" class="fw-normal text_md gray_shade">
+                                Price </th>
+                            <th scope="col" class="fw-normal text_md gray_shade">
+                                Product</th>
+                            <th scope="col" class="fw-normal text_md gray_shade">
+                                Action </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr valign="middle" class="vertical-align-middle spacing">
+                         <div id="normalContent" class="content show">   <td>
+                                <div class="d-flex gap-2"><input type="checkbox" name="CNXBAN" >
+                                    <span class="text_md fw-normal text_light_black">CNXBAN</span>
+                            </td>
+                            <td>
+                                <span
+                                    class="py-2 px-3 bg_green rounded-1 text-white text_md fw-normal d-inline-block">B</span>
+                            </td>
+                            <td>
+                                <select name="date"  class=" fw-medium text_md text_light_black">
+                                    <option value="20-FEB-2024">20-FEB-2024</option>
+                                </select>
+                            </td>
+                            <td>
+                                <div
+                                    class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+                                    <span class="px-1 py-2" onclick="decrementCounter()"><img
+                                            src="/assets/image/svg/minus.svg" alt="decrease-icon"></span>
+                                    <span id="counter" class= fw-medium text_md text_light_black">22000</span>
+                                    <span class="px-1 py-2" onclick="incrementCounter()"><img
+                                            src="/assets/image/svg/Plus.svg" alt="decrease-icon"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <span
+                                    class="rounded-1 light_green text_md fw-normal green_border mb-0">CE</span>
+                            </td>
+                            <td>
+                                <div
+                                    class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+                                    <span class="px-1 py-2" onclick="decrementCounter()"><img
+                                            src="/assets/image/svg/minus.svg" alt="decrease-icon"></span>
+                                    <span id="counter" class= "fw-medium text_md text_light_black">1000</span>
+                                    <span class="px-1 py-2" onclick="incrementCounter()"><img
+                                            src="/assets/image/svg/Plus.svg" alt="decrease-icon"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex  gap-1">
+                                    <div class="d-flex flex-column gap-1 align-items-center">
+
+                                        <div class="d-flex gap-1">
+                                            <input type="radio" name="mkt" id="mkt"/>
+                                            <label for="mkt" class="fs_s fw-normal">Mkt.</label>
+                                        </div>
+                                        <div class="d-flex gap-1">
+                                            <input type="radio" name="mkt" id="lim"/>
+                                            <label for="lim" class= "fs_s fw-normal">Lim.</label>
+                                        </div>
+
+                                    </div>
+                                    <div style="width: 130px;"
+                                        class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+                                        <span class="p-2" onclick="decrementCounter()"><img
+                                                src="/assets/image/svg/minus.svg" alt="decrease-icon"></span>
+                                        <span id="counter">400.50</span>
+                                        <span class="p-2 " onclick="incrementCounter()"><img
+                                                src="/assets/image/svg/Plus.svg" alt="increase-icon"></span>
+                                    </div>
+                                </div>
+            </div>
+            </td>
+            <td>
+                <div class="btn-group p-1 border_product light_white_bg">
+                    <button id="button1" type="button"
+                        class="btn btn-toggle-normal active text-uppercase py-1 text_sm fw_medium"
+                        onclick="toggleButton('button1', 'button2')">
+                        normal
                     </button>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <button class="dropdown-item" type="button">
-                          Action
-                        </button>
-                      </li>
-                      <li>
-                        <button class="dropdown-item" type="button">
-                          Another action
-                        </button>
-                      </li>
-                      <li>
-                        <button class="dropdown-item" type="button">
-                          Something else here
-                        </button>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-                <td class="fw-normal text_base text_light_black">22000</td>
-                <td class="fw-normal text_base text_light_black">CE</td>
-                <td class="fw-normal text_base text_light_black">1000</td>
-                <td class="fw-normal text_base text_light_black">400.50</td>
-                <td class="fw-normal text_base text_light_black">NORMAL</td>
-                <td class="fw-normal text_base text_light_black">
-                  <!-- Action buttons or icons go here -->
-                </td>
-              </tr>
-              <!-- More rows can be added here -->
+                    <button id="button2" type="button" class="btn btn-toggle-normal text-uppercase  text_sm fw_medium"
+                        onclick="toggleButton('button2', 'button1')">
+                        STOPLOSS
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div class="d-flex align-items-center gap-2">
+                    <span><svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.83262 9.82943C8.64542 9.70777 8.48401 9.55043 8.35762 9.36638C8.23123 9.18234 8.14233 8.9752 8.096 8.7568C8.04967 8.5384 8.04681 8.31301 8.08759 8.0935C8.12837 7.874 8.21199 7.66467 8.33367 7.47748L10.1875 4.62743C10.3072 4.436 10.4639 4.27034 10.6483 4.1401C10.8327 4.00987 11.0412 3.91767 11.2617 3.8689C11.4821 3.82013 11.7101 3.81576 11.9322 3.85604C12.1544 3.89632 12.3663 3.98045 12.5556 4.10351C12.7448 4.22658 12.9077 4.38612 13.0347 4.57281C13.1616 4.75951 13.2501 4.96963 13.295 5.1909C13.3399 5.41217 13.3402 5.64016 13.296 5.86156C13.2518 6.08297 13.164 6.29335 13.0376 6.48043L11.1846 9.33133C10.9387 9.70927 10.5528 9.97406 10.1118 10.0675C9.67068 10.1609 9.21056 10.0753 8.83262 9.82943ZM6.75692 10.0011C6.47157 9.4648 6.33518 8.86179 6.36194 8.25487C6.3887 7.64794 6.57763 7.05927 6.90907 6.55013L8.76207 3.70008C9.25374 2.94409 10.0256 2.41438 10.9078 2.22747C11.3447 2.13493 11.7954 2.12933 12.2344 2.211C12.6734 2.29267 13.0921 2.46001 13.4664 2.70346C13.8407 2.94691 14.1634 3.26171 14.4161 3.62988C14.6688 3.99805 14.8465 4.41238 14.939 4.84921C15.0315 5.28605 15.0371 5.73684 14.9555 6.17584C14.8738 6.61484 14.7065 7.03345 14.463 7.40778L12.61 10.2578C12.2876 10.754 11.8412 11.1574 11.3151 11.4283C10.789 11.6991 10.2013 11.8279 9.61012 11.8019C9.01895 11.776 8.44479 11.5963 7.94438 11.2804C7.44398 10.9646 7.03467 10.5236 6.75692 10.0011Z"
+                                fill="#353535" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.629 13.1776C4.4418 13.0559 4.2804 12.8986 4.15401 12.7145C4.02762 12.5305 3.93872 12.3234 3.89239 12.105C3.84606 11.8865 3.8432 11.6612 3.88398 11.4417C3.92476 11.2221 4.00837 11.0128 4.13006 10.8256L5.98391 7.97558C6.10361 7.78415 6.26025 7.61849 6.44467 7.48825C6.6291 7.35802 6.83762 7.26582 7.05806 7.21705C7.2785 7.16828 7.50645 7.1639 7.7286 7.20419C7.95075 7.24447 8.16266 7.3286 8.35194 7.45166C8.54123 7.57473 8.7041 7.73427 8.83106 7.92096C8.95802 8.10766 9.04651 8.31777 9.09138 8.53904C9.13626 8.76031 9.1366 8.98831 9.0924 9.20971C9.0482 9.43112 8.96035 9.6415 8.83396 9.82858L6.98096 12.6795C6.73511 13.0574 6.34921 13.3222 5.90814 13.4156C5.46706 13.509 5.00695 13.4234 4.629 13.1776ZM2.55331 13.3493C2.26796 12.8129 2.13157 12.2099 2.15833 11.603C2.18509 10.9961 2.37402 10.4074 2.70546 9.89828L4.55846 7.04908C4.80185 6.67475 5.11659 6.35203 5.48471 6.09934C5.85283 5.84664 6.26711 5.66893 6.70391 5.57635C7.14071 5.48376 7.59146 5.47812 8.03044 5.55974C8.46942 5.64135 8.88803 5.80864 9.26236 6.05203C9.63669 6.29543 9.95941 6.61017 10.2121 6.97829C10.4648 7.3464 10.6425 7.76069 10.7351 8.19749C10.8277 8.63428 10.8333 9.08504 10.7517 9.52402C10.6701 9.963 10.5028 10.3816 10.2594 10.7559L8.40641 13.606C8.08398 14.1022 7.63763 14.5056 7.1115 14.7764C6.58537 15.0472 5.99767 15.176 5.40651 15.1501C4.81534 15.1242 4.24117 14.9444 3.74077 14.6286C3.24037 14.3127 2.83106 13.8718 2.55331 13.3493Z"
+                                fill="#353535" />
+                        </svg>
+                    </span>
+                    <span>
+                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5 5.5V3.63333C5 2.88667 5 2.51333 5.14533 2.228C5.27333 1.97667 5.47667 1.77333 5.728 1.64533C6.01333 1.5 6.38667 1.5 7.13333 1.5H10.8667C11.6133 1.5 11.9867 1.5 12.272 1.64533C12.5229 1.77316 12.7268 1.97713 12.8547 2.228C13 2.51333 13 2.88667 13 3.63333V7.36667C13 8.11333 13 8.48667 12.8547 8.772C12.7268 9.02282 12.5228 9.22676 12.272 9.35467C11.9867 9.5 11.6133 9.5 10.8687 9.5H9M5 5.5H3.13333C2.38667 5.5 2.01333 5.5 1.728 5.64533C1.4771 5.77313 1.27313 5.9771 1.14533 6.228C1 6.51333 1 6.88667 1 7.63333V11.3667C1 12.1133 1 12.4867 1.14533 12.772C1.27316 13.0229 1.47713 13.2268 1.728 13.3547C2.01267 13.5 2.386 13.5 3.13133 13.5H6.86933C7.614 13.5 7.98667 13.5 8.272 13.3547C8.52287 13.2268 8.72684 13.0229 8.85467 12.772C9 12.4867 9 12.114 9 11.3687V9.5M5 5.5H6.86667C7.61333 5.5 7.98667 5.5 8.272 5.64533C8.52287 5.77316 8.72684 5.97713 8.85467 6.228C9 6.51267 9 6.886 9 7.63133V9.5"
+                                stroke="#353535" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10.0001 2.5V3.16667H13.3334V4.5H12.6667V13.1667C12.6667 13.9 12.0667 14.5 11.3334 14.5H4.66675C3.93341 14.5 3.33341 13.9 3.33341 13.1667V4.5H2.66675V3.16667H6.00008V2.5H10.0001ZM4.66675 13.1667H11.3334V4.5H4.66675V13.1667ZM6.00008 5.83333H7.33341V11.8333H6.00008V5.83333ZM10.0001 5.83333H8.66675V11.8333H10.0001V5.83333Z"
+                                fill="#353535" />
+                        </svg>
+
+                    </span>
+                </div>
+            </td></div>
+            </tr>
+                        <tr valign="middle" class="vertical-align-middle spacing">
+                         <div id="normalContent" class="content show">   <td>
+                                <div class="d-flex gap-2"><input type="checkbox" name="CNXBAN" >
+                                    <span class="text_md fw-normal text_light_black">NIFTY</span>
+                            </td>
+                            <td>
+                                <span
+                                    class="py-2 px-3 bg_green rounded-1 text-white text_md fw-normal d-inline-block">B</span>
+                            </td>
+                            <td>
+                                <select name="date"  class= fw-medium text_md text_light_black">
+                                    <option value="20-FEB-2024">20-FEB-2024</option>
+                                </select>
+                            </td>
+                            <td>
+                                <div
+                                    class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+                                    <span class="px-1 py-2" onclick="decrementCounter()"><img
+                                            src="/assets/image/svg/minus.svg" alt="decrease-icon"></span>
+                                    <span id="counter" class= fw-medium text_md text_light_black">22000</span>
+                                    <span class="px-1 py-2" onclick="incrementCounter()"><img
+                                            src="/assets/image/svg/Plus.svg" alt="decrease-icon"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <span
+                                    class="rounded-1 light_green text_md fw-normal green_border mb-0">CE</span>
+                            </td>
+                            <td>
+                                <div
+                                    class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+                                    <span class="px-1 py-2" onclick="decrementCounter()"><img
+                                            src="/assets/image/svg/minus.svg" alt="decrease-icon"></span>
+                                    <span id="counter" class= fw-medium text_md text_light_black">1000</span>
+                                    <span class="px-1 py-2" onclick="incrementCounter()"><img
+                                            src="/assets/image/svg/Plus.svg" alt="decrease-icon"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex  gap-1">
+                                    <div class="d-flex flex-column gap-1 align-items-center">
+
+                                        <div class="d-flex gap-1">
+                                            <input type="radio" name="mkt" id="mkt">
+                                            <label for="mkt" class= fs_s fw-normal">Mkt.</label>
+                                        </div>
+                                        <div class="d-flex gap-1">
+                                            <input type="radio" name="mkt" id="lim">
+                                            <label for="lim" class= fs_s fw-normal">Lim.</label>
+                                        </div>
+
+                                    </div>
+                                    <div style="width: 130px;"
+                                        class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+                                        <span class="p-2" onclick="decrementCounter()"><img
+                                                src="/assets/image/svg/minus.svg" alt="decrease-icon"></span>
+                                        <span id="counter">400.50</span>
+                                        <span class="p-2 " onclick="incrementCounter()"><img
+                                                src="/assets/image/svg/Plus.svg" alt="increase-icon"></span>
+                                    </div>
+                                </div>
+            </div>
+            </td>
+            <td>
+                <div class="btn-group p-1 border_product light_white_bg">
+                    <button id="button1" type="button"
+                        class="btn btn-toggle-normal active text-uppercase py-1 text_sm fw_medium"
+                        onclick="toggleButton('button1', 'button2')">
+                        normal
+                    </button>
+                    <button id="button2" type="button" class="btn btn-toggle-normal text-uppercase  text_sm fw_medium"
+                        onclick="toggleButton('button2', 'button1')">
+                        STOPLOSS
+                    </button>
+                </div>
+            </td>
+            <td>
+                <div class="d-flex align-items-center gap-2">
+                    <span><svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.83262 9.82943C8.64542 9.70777 8.48401 9.55043 8.35762 9.36638C8.23123 9.18234 8.14233 8.9752 8.096 8.7568C8.04967 8.5384 8.04681 8.31301 8.08759 8.0935C8.12837 7.874 8.21199 7.66467 8.33367 7.47748L10.1875 4.62743C10.3072 4.436 10.4639 4.27034 10.6483 4.1401C10.8327 4.00987 11.0412 3.91767 11.2617 3.8689C11.4821 3.82013 11.7101 3.81576 11.9322 3.85604C12.1544 3.89632 12.3663 3.98045 12.5556 4.10351C12.7448 4.22658 12.9077 4.38612 13.0347 4.57281C13.1616 4.75951 13.2501 4.96963 13.295 5.1909C13.3399 5.41217 13.3402 5.64016 13.296 5.86156C13.2518 6.08297 13.164 6.29335 13.0376 6.48043L11.1846 9.33133C10.9387 9.70927 10.5528 9.97406 10.1118 10.0675C9.67068 10.1609 9.21056 10.0753 8.83262 9.82943ZM6.75692 10.0011C6.47157 9.4648 6.33518 8.86179 6.36194 8.25487C6.3887 7.64794 6.57763 7.05927 6.90907 6.55013L8.76207 3.70008C9.25374 2.94409 10.0256 2.41438 10.9078 2.22747C11.3447 2.13493 11.7954 2.12933 12.2344 2.211C12.6734 2.29267 13.0921 2.46001 13.4664 2.70346C13.8407 2.94691 14.1634 3.26171 14.4161 3.62988C14.6688 3.99805 14.8465 4.41238 14.939 4.84921C15.0315 5.28605 15.0371 5.73684 14.9555 6.17584C14.8738 6.61484 14.7065 7.03345 14.463 7.40778L12.61 10.2578C12.2876 10.754 11.8412 11.1574 11.3151 11.4283C10.789 11.6991 10.2013 11.8279 9.61012 11.8019C9.01895 11.776 8.44479 11.5963 7.94438 11.2804C7.44398 10.9646 7.03467 10.5236 6.75692 10.0011Z"
+                                fill="#353535" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.629 13.1776C4.4418 13.0559 4.2804 12.8986 4.15401 12.7145C4.02762 12.5305 3.93872 12.3234 3.89239 12.105C3.84606 11.8865 3.8432 11.6612 3.88398 11.4417C3.92476 11.2221 4.00837 11.0128 4.13006 10.8256L5.98391 7.97558C6.10361 7.78415 6.26025 7.61849 6.44467 7.48825C6.6291 7.35802 6.83762 7.26582 7.05806 7.21705C7.2785 7.16828 7.50645 7.1639 7.7286 7.20419C7.95075 7.24447 8.16266 7.3286 8.35194 7.45166C8.54123 7.57473 8.7041 7.73427 8.83106 7.92096C8.95802 8.10766 9.04651 8.31777 9.09138 8.53904C9.13626 8.76031 9.1366 8.98831 9.0924 9.20971C9.0482 9.43112 8.96035 9.6415 8.83396 9.82858L6.98096 12.6795C6.73511 13.0574 6.34921 13.3222 5.90814 13.4156C5.46706 13.509 5.00695 13.4234 4.629 13.1776ZM2.55331 13.3493C2.26796 12.8129 2.13157 12.2099 2.15833 11.603C2.18509 10.9961 2.37402 10.4074 2.70546 9.89828L4.55846 7.04908C4.80185 6.67475 5.11659 6.35203 5.48471 6.09934C5.85283 5.84664 6.26711 5.66893 6.70391 5.57635C7.14071 5.48376 7.59146 5.47812 8.03044 5.55974C8.46942 5.64135 8.88803 5.80864 9.26236 6.05203C9.63669 6.29543 9.95941 6.61017 10.2121 6.97829C10.4648 7.3464 10.6425 7.76069 10.7351 8.19749C10.8277 8.63428 10.8333 9.08504 10.7517 9.52402C10.6701 9.963 10.5028 10.3816 10.2594 10.7559L8.40641 13.606C8.08398 14.1022 7.63763 14.5056 7.1115 14.7764C6.58537 15.0472 5.99767 15.176 5.40651 15.1501C4.81534 15.1242 4.24117 14.9444 3.74077 14.6286C3.24037 14.3127 2.83106 13.8718 2.55331 13.3493Z"
+                                fill="#353535" />
+                        </svg>
+                    </span>
+                    <span>
+                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5 5.5V3.63333C5 2.88667 5 2.51333 5.14533 2.228C5.27333 1.97667 5.47667 1.77333 5.728 1.64533C6.01333 1.5 6.38667 1.5 7.13333 1.5H10.8667C11.6133 1.5 11.9867 1.5 12.272 1.64533C12.5229 1.77316 12.7268 1.97713 12.8547 2.228C13 2.51333 13 2.88667 13 3.63333V7.36667C13 8.11333 13 8.48667 12.8547 8.772C12.7268 9.02282 12.5228 9.22676 12.272 9.35467C11.9867 9.5 11.6133 9.5 10.8687 9.5H9M5 5.5H3.13333C2.38667 5.5 2.01333 5.5 1.728 5.64533C1.4771 5.77313 1.27313 5.9771 1.14533 6.228C1 6.51333 1 6.88667 1 7.63333V11.3667C1 12.1133 1 12.4867 1.14533 12.772C1.27316 13.0229 1.47713 13.2268 1.728 13.3547C2.01267 13.5 2.386 13.5 3.13133 13.5H6.86933C7.614 13.5 7.98667 13.5 8.272 13.3547C8.52287 13.2268 8.72684 13.0229 8.85467 12.772C9 12.4867 9 12.114 9 11.3687V9.5M5 5.5H6.86667C7.61333 5.5 7.98667 5.5 8.272 5.64533C8.52287 5.77316 8.72684 5.97713 8.85467 6.228C9 6.51267 9 6.886 9 7.63133V9.5"
+                                stroke="#353535" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10.0001 2.5V3.16667H13.3334V4.5H12.6667V13.1667C12.6667 13.9 12.0667 14.5 11.3334 14.5H4.66675C3.93341 14.5 3.33341 13.9 3.33341 13.1667V4.5H2.66675V3.16667H6.00008V2.5H10.0001ZM4.66675 13.1667H11.3334V4.5H4.66675V13.1667ZM6.00008 5.83333H7.33341V11.8333H6.00008V5.83333ZM10.0001 5.83333H8.66675V11.8333H10.0001V5.83333Z"
+                                fill="#353535" />
+                        </svg>
+
+                    </span>
+                </div>
+            </td></div>
+            </tr>
+                        <tr  valign="middle" class="vertical-align-middle spacing">
+                         <div class="content hide">  <td>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <p class="text_md fw_medium text-center text_gray">Stoploss</p>
+                            </td>
+                            <td>
+                                <span
+                                    class="py-2 px-3 bg_orange rounded-1 text-white text_md fw-normal text-uppercase">s</span>
+                            </td>
+                            <td>
+                                <select name="date"  class="fw-medium text_md text_light_black bg_darkGray">
+                                    <option value="20-FEB-2024">20-FEB-2024</option>
+                                </select>
+                            </td>
+                            <td>
+                                <div
+                                    class="d-flex border border-light_gray bg_darkGray rounded-2 align-items-center justify-content-around">
+                                    <span class="px-1 py-2" onclick="decrementCounter()"><img
+                                            src="/assets/image/svg/minus.svg" alt="decrease-icon"></span>
+                                    <span id="counter" class= fw-medium text_md text_light_black">22000</span>
+                                    <span class="px-1 py-2" onclick="incrementCounter()"><img
+                                            src="/assets/image/svg/Plus.svg" alt="decrease-icon"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <span
+                                    class="rounded-1 light_green bg_darkGray text_md fw-normal green_border mb-0">CE</span>
+                            </td>
+                            <td>
+                                <div
+                                    class="d-flex border border-light_gray bg_darkGray rounded-2 align-items-center justify-content-around">
+                                    <span class="px-1 py-2" onclick="decrementCounter()"><img
+                                            src="/assets/image/svg/minus.svg" alt="decrease-icon"></span>
+                                    <span id="counter" class= fw-medium text_md text_light_black">1000</span>
+                                    <span class="px-1 py-2" onclick="incrementCounter()"><img
+                                            src="/assets/image/svg/Plus.svg" alt="decrease-icon"></span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="fw-normal text_md text_gray">SLTP</span>
+                                    <div style="width: 130px;"
+                                        class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+                                        <span class="p-2" onclick="decrementCounter()"><img
+                                                src="/assets/image/svg/minus.svg" alt="decrease-icon"></span>
+                                        <span  id="counter">350.00</span>
+                                        <span class="p-2 " onclick="incrementCounter()"><img
+                                                src="/assets/image/svg/Plus.svg" alt="increase-icon"></span>
+                                    </div>
+                                </div>
+            </div>
+            </td>
+            <td>
+                <div class="d-flex gap-3 align-items-center ms-1">
+                    <span class="fw-normal text_md text_gray text-nowrap">   Limit Price</span>   
+                    <span style="width: 130px;" class="fw_medium text-center text_md text_light_black px-4 py-2 prize_limit">350.00</span>
+                </div>
+            </td>
+            </div> 
+            </tr>
+            <tr valign="middle" class="vertical-align-middle spacing">
+                <div id="normalContent" class="content show">   <td>
+                       <div class="d-flex gap-2"><input type="checkbox" name="CNXBAN" >
+                           <span class="text_md fw-normal text_light_black">CNXBAN</span>
+                   </td>
+                   <td>
+                       <span
+                           class="py-2 px-3 bg_green rounded-1 text-white text_md fw-normal d-inline-block">B</span>
+                   </td>
+                   <td>
+                       <select name="date"  class= fw-medium text_md text_light_black">
+                           <option value="20-FEB-2024">20-FEB-2024</option>
+                       </select>
+                   </td>
+                   <td>
+                       <div
+                           class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+                           <span class="px-1 py-2" onclick="decrementCounter()"><img
+                                   src="/assets/image/svg/minus.svg" alt="decrease-icon"></span>
+                           <span id="counter" class= fw-medium text_md text_light_black">22000</span>
+                           <span class="px-1 py-2" onclick="incrementCounter()"><img
+                                   src="/assets/image/svg/Plus.svg" alt="decrease-icon"></span>
+                       </div>
+                   </td>
+                   <td>
+                       <span
+                           class="rounded-1 light_green text_md fw-normal green_border mb-0">CE</span>
+                   </td>
+                   <td>
+                       <div
+                           class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+                           <span class="px-1 py-2" onclick="decrementCounter()"><img
+                                   src="/assets/image/svg/minus.svg" alt="decrease-icon"></span>
+                           <span id="counter" class= fw-medium text_md text_light_black">1000</span>
+                           <span class="px-1 py-2" onclick="incrementCounter()"><img
+                                   src="/assets/image/svg/Plus.svg" alt="decrease-icon"></span>
+                       </div>
+                   </td>
+                   <td>
+                       <div class="d-flex  gap-1">
+                           <div class="d-flex flex-column gap-1 align-items-center">
+
+                               <div class="d-flex gap-1">
+                                   <input type="radio" name="mkt" id="mkt">
+                                   <label for="mkt" class= fs_s fw-normal">Mkt.</label>
+                               </div>
+                               <div class="d-flex gap-1">
+                                   <input type="radio" name="mkt" id="lim">
+                                   <label for="lim" class= fs_s fw-normal">Lim.</label>
+                               </div>
+
+                           </div>
+                           <div style="width: 130px;"
+                               class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+                               <span class="p-2" onclick="decrementCounter()"><img
+                                       src="/assets/image/svg/minus.svg" alt="decrease-icon"></span>
+                               <span id="counter">400.50</span>
+                               <span class="p-2 " onclick="incrementCounter()"><img
+                                       src="/assets/image/svg/Plus.svg" alt="increase-icon"></span>
+                           </div>
+                       </div>
+   </div>
+   </td>
+   <td>
+       <div class="btn-group p-1 border_product light_white_bg">
+           <button id="button1" type="button"
+               class="btn btn-toggle-normal active text-uppercase py-1 text_sm fw_medium"
+               onclick="toggleButton('button1', 'button2')">
+               normal
+           </button>
+           <button id="button2" type="button" class="btn btn-toggle-normal text-uppercase  text_sm fw_medium"
+               onclick="toggleButton('button2', 'button1')">
+               STOPLOSS
+           </button>
+       </div>
+   </td>
+   <td>
+       <div class="d-flex align-items-center gap-2">
+           <span><svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                   <path fill-rule="evenodd" clip-rule="evenodd"
+                       d="M8.83262 9.82943C8.64542 9.70777 8.48401 9.55043 8.35762 9.36638C8.23123 9.18234 8.14233 8.9752 8.096 8.7568C8.04967 8.5384 8.04681 8.31301 8.08759 8.0935C8.12837 7.874 8.21199 7.66467 8.33367 7.47748L10.1875 4.62743C10.3072 4.436 10.4639 4.27034 10.6483 4.1401C10.8327 4.00987 11.0412 3.91767 11.2617 3.8689C11.4821 3.82013 11.7101 3.81576 11.9322 3.85604C12.1544 3.89632 12.3663 3.98045 12.5556 4.10351C12.7448 4.22658 12.9077 4.38612 13.0347 4.57281C13.1616 4.75951 13.2501 4.96963 13.295 5.1909C13.3399 5.41217 13.3402 5.64016 13.296 5.86156C13.2518 6.08297 13.164 6.29335 13.0376 6.48043L11.1846 9.33133C10.9387 9.70927 10.5528 9.97406 10.1118 10.0675C9.67068 10.1609 9.21056 10.0753 8.83262 9.82943ZM6.75692 10.0011C6.47157 9.4648 6.33518 8.86179 6.36194 8.25487C6.3887 7.64794 6.57763 7.05927 6.90907 6.55013L8.76207 3.70008C9.25374 2.94409 10.0256 2.41438 10.9078 2.22747C11.3447 2.13493 11.7954 2.12933 12.2344 2.211C12.6734 2.29267 13.0921 2.46001 13.4664 2.70346C13.8407 2.94691 14.1634 3.26171 14.4161 3.62988C14.6688 3.99805 14.8465 4.41238 14.939 4.84921C15.0315 5.28605 15.0371 5.73684 14.9555 6.17584C14.8738 6.61484 14.7065 7.03345 14.463 7.40778L12.61 10.2578C12.2876 10.754 11.8412 11.1574 11.3151 11.4283C10.789 11.6991 10.2013 11.8279 9.61012 11.8019C9.01895 11.776 8.44479 11.5963 7.94438 11.2804C7.44398 10.9646 7.03467 10.5236 6.75692 10.0011Z"
+                       fill="#353535" />
+                   <path fill-rule="evenodd" clip-rule="evenodd"
+                       d="M4.629 13.1776C4.4418 13.0559 4.2804 12.8986 4.15401 12.7145C4.02762 12.5305 3.93872 12.3234 3.89239 12.105C3.84606 11.8865 3.8432 11.6612 3.88398 11.4417C3.92476 11.2221 4.00837 11.0128 4.13006 10.8256L5.98391 7.97558C6.10361 7.78415 6.26025 7.61849 6.44467 7.48825C6.6291 7.35802 6.83762 7.26582 7.05806 7.21705C7.2785 7.16828 7.50645 7.1639 7.7286 7.20419C7.95075 7.24447 8.16266 7.3286 8.35194 7.45166C8.54123 7.57473 8.7041 7.73427 8.83106 7.92096C8.95802 8.10766 9.04651 8.31777 9.09138 8.53904C9.13626 8.76031 9.1366 8.98831 9.0924 9.20971C9.0482 9.43112 8.96035 9.6415 8.83396 9.82858L6.98096 12.6795C6.73511 13.0574 6.34921 13.3222 5.90814 13.4156C5.46706 13.509 5.00695 13.4234 4.629 13.1776ZM2.55331 13.3493C2.26796 12.8129 2.13157 12.2099 2.15833 11.603C2.18509 10.9961 2.37402 10.4074 2.70546 9.89828L4.55846 7.04908C4.80185 6.67475 5.11659 6.35203 5.48471 6.09934C5.85283 5.84664 6.26711 5.66893 6.70391 5.57635C7.14071 5.48376 7.59146 5.47812 8.03044 5.55974C8.46942 5.64135 8.88803 5.80864 9.26236 6.05203C9.63669 6.29543 9.95941 6.61017 10.2121 6.97829C10.4648 7.3464 10.6425 7.76069 10.7351 8.19749C10.8277 8.63428 10.8333 9.08504 10.7517 9.52402C10.6701 9.963 10.5028 10.3816 10.2594 10.7559L8.40641 13.606C8.08398 14.1022 7.63763 14.5056 7.1115 14.7764C6.58537 15.0472 5.99767 15.176 5.40651 15.1501C4.81534 15.1242 4.24117 14.9444 3.74077 14.6286C3.24037 14.3127 2.83106 13.8718 2.55331 13.3493Z"
+                       fill="#353535" />
+               </svg>
+           </span>
+           <span>
+               <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path
+                       d="M5 5.5V3.63333C5 2.88667 5 2.51333 5.14533 2.228C5.27333 1.97667 5.47667 1.77333 5.728 1.64533C6.01333 1.5 6.38667 1.5 7.13333 1.5H10.8667C11.6133 1.5 11.9867 1.5 12.272 1.64533C12.5229 1.77316 12.7268 1.97713 12.8547 2.228C13 2.51333 13 2.88667 13 3.63333V7.36667C13 8.11333 13 8.48667 12.8547 8.772C12.7268 9.02282 12.5228 9.22676 12.272 9.35467C11.9867 9.5 11.6133 9.5 10.8687 9.5H9M5 5.5H3.13333C2.38667 5.5 2.01333 5.5 1.728 5.64533C1.4771 5.77313 1.27313 5.9771 1.14533 6.228C1 6.51333 1 6.88667 1 7.63333V11.3667C1 12.1133 1 12.4867 1.14533 12.772C1.27316 13.0229 1.47713 13.2268 1.728 13.3547C2.01267 13.5 2.386 13.5 3.13133 13.5H6.86933C7.614 13.5 7.98667 13.5 8.272 13.3547C8.52287 13.2268 8.72684 13.0229 8.85467 12.772C9 12.4867 9 12.114 9 11.3687V9.5M5 5.5H6.86667C7.61333 5.5 7.98667 5.5 8.272 5.64533C8.52287 5.77316 8.72684 5.97713 8.85467 6.228C9 6.51267 9 6.886 9 7.63133V9.5"
+                       stroke="#353535" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+               </svg>
+           </span>
+           <span>
+               <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path fill-rule="evenodd" clip-rule="evenodd"
+                       d="M10.0001 2.5V3.16667H13.3334V4.5H12.6667V13.1667C12.6667 13.9 12.0667 14.5 11.3334 14.5H4.66675C3.93341 14.5 3.33341 13.9 3.33341 13.1667V4.5H2.66675V3.16667H6.00008V2.5H10.0001ZM4.66675 13.1667H11.3334V4.5H4.66675V13.1667ZM6.00008 5.83333H7.33341V11.8333H6.00008V5.83333ZM10.0001 5.83333H8.66675V11.8333H10.0001V5.83333Z"
+                       fill="#353535" />
+               </svg>
+
+           </span>
+       </div>
+   </td></div>
+   </tr>        <tr valign="middle" class="vertical-align-middle spacing">
+    <div id="normalContent" class="content show">   <td>
+           <div class="d-flex gap-2"><input type="checkbox" name="CNXBAN" >
+               <span class="text_md fw-normal text_light_black">CNXBAN</span>
+       </td>
+       <td>
+           <span
+               class="py-2 px-3 bg_green rounded-1 text-white text_md fw-normal d-inline-block">B</span>
+       </td>
+       <td>
+           <select name="date" class= "fw-medium text_md text_light_black">
+               <option value="20-FEB-2024">20-FEB-2024</option>
+           </select>
+       </td>
+       <td>
+           <div
+               class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+               <span class="px-1 py-2" onclick="decrementCounter()"><img
+                       src="/assets/image/svg/minus.svg" alt="decrease-icon"></span>
+               <span id="counter" class= fw-medium text_md text_light_black">22000</span>
+               <span class="px-1 py-2" onclick="incrementCounter()"><img
+                       src="/assets/image/svg/Plus.svg" alt="decrease-icon"></span>
+           </div>
+       </td>
+       <td>
+           <span
+               class="rounded-1 light_green text_md fw-normal green_border mb-0">CE</span>
+       </td>
+       <td>
+           <div
+               class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+               <span class="px-1 py-2" onclick="decrementCounter()"><img
+                       src="/assets/image/svg/minus.svg" alt="decrease-icon"></span>
+               <span id="counter" class= fw-medium text_md text_light_black">1000</span>
+               <span class="px-1 py-2" onclick="incrementCounter()"><img
+                       src="/assets/image/svg/Plus.svg" alt="decrease-icon"></span>
+           </div>
+       </td>
+       <td>
+           <div class="d-flex  gap-1">
+               <div class="d-flex flex-column gap-1 align-items-center">
+
+                   <div class="d-flex gap-1">
+                       <input type="radio" name="mkt" id="mkt">
+                       <label for="mkt" class= fs_s fw-normal">Mkt.</label>
+                   </div>
+                   <div class="d-flex gap-1">
+                       <input type="radio" name="mkt" id="lim">
+                       <label for="lim" class= fs_s fw-normal">Lim.</label>
+                   </div>
+
+               </div>
+               <div style="width: 130px;"
+                   class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+                   <span class="p-2" onclick="decrementCounter()"><img
+                           src="/assets/image/svg/minus.svg" alt="decrease-icon"></span>
+                   <span id="counter">400.50</span>
+                   <span class="p-2 " onclick="incrementCounter()"><img
+                           src="/assets/image/svg/Plus.svg" alt="increase-icon"></span>
+               </div>
+           </div>
+</div>
+</td>
+<td>
+<div class="btn-group p-1 border_product light_white_bg">
+<button id="button1" type="button"
+   class="btn btn-toggle-normal active text-uppercase py-1 text_sm fw_medium"
+   onclick="toggleButton('button1', 'button2')">
+   normal
+</button>
+<button id="button2" type="button" class="btn btn-toggle-normal text-uppercase  text_sm fw_medium"
+   onclick="toggleButton('button2', 'button1')">
+   STOPLOSS
+</button>
+</div>
+</td>
+<td>
+<div class="d-flex align-items-center gap-2">
+<span><svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+       xmlns="http://www.w3.org/2000/svg">
+       <path fill-rule="evenodd" clip-rule="evenodd"
+           d="M8.83262 9.82943C8.64542 9.70777 8.48401 9.55043 8.35762 9.36638C8.23123 9.18234 8.14233 8.9752 8.096 8.7568C8.04967 8.5384 8.04681 8.31301 8.08759 8.0935C8.12837 7.874 8.21199 7.66467 8.33367 7.47748L10.1875 4.62743C10.3072 4.436 10.4639 4.27034 10.6483 4.1401C10.8327 4.00987 11.0412 3.91767 11.2617 3.8689C11.4821 3.82013 11.7101 3.81576 11.9322 3.85604C12.1544 3.89632 12.3663 3.98045 12.5556 4.10351C12.7448 4.22658 12.9077 4.38612 13.0347 4.57281C13.1616 4.75951 13.2501 4.96963 13.295 5.1909C13.3399 5.41217 13.3402 5.64016 13.296 5.86156C13.2518 6.08297 13.164 6.29335 13.0376 6.48043L11.1846 9.33133C10.9387 9.70927 10.5528 9.97406 10.1118 10.0675C9.67068 10.1609 9.21056 10.0753 8.83262 9.82943ZM6.75692 10.0011C6.47157 9.4648 6.33518 8.86179 6.36194 8.25487C6.3887 7.64794 6.57763 7.05927 6.90907 6.55013L8.76207 3.70008C9.25374 2.94409 10.0256 2.41438 10.9078 2.22747C11.3447 2.13493 11.7954 2.12933 12.2344 2.211C12.6734 2.29267 13.0921 2.46001 13.4664 2.70346C13.8407 2.94691 14.1634 3.26171 14.4161 3.62988C14.6688 3.99805 14.8465 4.41238 14.939 4.84921C15.0315 5.28605 15.0371 5.73684 14.9555 6.17584C14.8738 6.61484 14.7065 7.03345 14.463 7.40778L12.61 10.2578C12.2876 10.754 11.8412 11.1574 11.3151 11.4283C10.789 11.6991 10.2013 11.8279 9.61012 11.8019C9.01895 11.776 8.44479 11.5963 7.94438 11.2804C7.44398 10.9646 7.03467 10.5236 6.75692 10.0011Z"
+           fill="#353535" />
+       <path fill-rule="evenodd" clip-rule="evenodd"
+           d="M4.629 13.1776C4.4418 13.0559 4.2804 12.8986 4.15401 12.7145C4.02762 12.5305 3.93872 12.3234 3.89239 12.105C3.84606 11.8865 3.8432 11.6612 3.88398 11.4417C3.92476 11.2221 4.00837 11.0128 4.13006 10.8256L5.98391 7.97558C6.10361 7.78415 6.26025 7.61849 6.44467 7.48825C6.6291 7.35802 6.83762 7.26582 7.05806 7.21705C7.2785 7.16828 7.50645 7.1639 7.7286 7.20419C7.95075 7.24447 8.16266 7.3286 8.35194 7.45166C8.54123 7.57473 8.7041 7.73427 8.83106 7.92096C8.95802 8.10766 9.04651 8.31777 9.09138 8.53904C9.13626 8.76031 9.1366 8.98831 9.0924 9.20971C9.0482 9.43112 8.96035 9.6415 8.83396 9.82858L6.98096 12.6795C6.73511 13.0574 6.34921 13.3222 5.90814 13.4156C5.46706 13.509 5.00695 13.4234 4.629 13.1776ZM2.55331 13.3493C2.26796 12.8129 2.13157 12.2099 2.15833 11.603C2.18509 10.9961 2.37402 10.4074 2.70546 9.89828L4.55846 7.04908C4.80185 6.67475 5.11659 6.35203 5.48471 6.09934C5.85283 5.84664 6.26711 5.66893 6.70391 5.57635C7.14071 5.48376 7.59146 5.47812 8.03044 5.55974C8.46942 5.64135 8.88803 5.80864 9.26236 6.05203C9.63669 6.29543 9.95941 6.61017 10.2121 6.97829C10.4648 7.3464 10.6425 7.76069 10.7351 8.19749C10.8277 8.63428 10.8333 9.08504 10.7517 9.52402C10.6701 9.963 10.5028 10.3816 10.2594 10.7559L8.40641 13.606C8.08398 14.1022 7.63763 14.5056 7.1115 14.7764C6.58537 15.0472 5.99767 15.176 5.40651 15.1501C4.81534 15.1242 4.24117 14.9444 3.74077 14.6286C3.24037 14.3127 2.83106 13.8718 2.55331 13.3493Z"
+           fill="#353535" />
+   </svg>
+</span>
+<span>
+   <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <path
+           d="M5 5.5V3.63333C5 2.88667 5 2.51333 5.14533 2.228C5.27333 1.97667 5.47667 1.77333 5.728 1.64533C6.01333 1.5 6.38667 1.5 7.13333 1.5H10.8667C11.6133 1.5 11.9867 1.5 12.272 1.64533C12.5229 1.77316 12.7268 1.97713 12.8547 2.228C13 2.51333 13 2.88667 13 3.63333V7.36667C13 8.11333 13 8.48667 12.8547 8.772C12.7268 9.02282 12.5228 9.22676 12.272 9.35467C11.9867 9.5 11.6133 9.5 10.8687 9.5H9M5 5.5H3.13333C2.38667 5.5 2.01333 5.5 1.728 5.64533C1.4771 5.77313 1.27313 5.9771 1.14533 6.228C1 6.51333 1 6.88667 1 7.63333V11.3667C1 12.1133 1 12.4867 1.14533 12.772C1.27316 13.0229 1.47713 13.2268 1.728 13.3547C2.01267 13.5 2.386 13.5 3.13133 13.5H6.86933C7.614 13.5 7.98667 13.5 8.272 13.3547C8.52287 13.2268 8.72684 13.0229 8.85467 12.772C9 12.4867 9 12.114 9 11.3687V9.5M5 5.5H6.86667C7.61333 5.5 7.98667 5.5 8.272 5.64533C8.52287 5.77316 8.72684 5.97713 8.85467 6.228C9 6.51267 9 6.886 9 7.63133V9.5"
+           stroke="#353535" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+   </svg>
+</span>
+<span>
+   <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <path fill-rule="evenodd" clip-rule="evenodd"
+           d="M10.0001 2.5V3.16667H13.3334V4.5H12.6667V13.1667C12.6667 13.9 12.0667 14.5 11.3334 14.5H4.66675C3.93341 14.5 3.33341 13.9 3.33341 13.1667V4.5H2.66675V3.16667H6.00008V2.5H10.0001ZM4.66675 13.1667H11.3334V4.5H4.66675V13.1667ZM6.00008 5.83333H7.33341V11.8333H6.00008V5.83333ZM10.0001 5.83333H8.66675V11.8333H10.0001V5.83333Z"
+           fill="#353535" />
+   </svg>
+
+</span>
+</div>
+</td></div>
+</tr>
+
             </tbody>
-          </table>
+            </table>
         </div>
+        </div>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <script>
+        let counter = 0;
+
+        function incrementCounter() {
+            counter++;
+            document.getElementById("counter").innerHTML = counter;
+        }
+
+        function decrementCounter() {
+            counter--;
+            document.getElementById("counter").innerHTML = counter;
+        }
+    </script>
       </div>
     </div>
 

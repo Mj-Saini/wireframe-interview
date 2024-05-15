@@ -9,6 +9,9 @@
     font-family: "Roboto", sans-serif;
 }
 
+body {
+    max-width: 1140px;
+}
 
 /* ==== ROOT START ==== */
 :root {
@@ -191,7 +194,8 @@
 .border_green {
     border: 1px solid var(--green) !important;
 }
-.prize_limit{
+
+.prize_limit {
     border: 1px solid #DCDCDC;
     border-radius: 8px;
     background: #DCDCDC;
@@ -245,6 +249,10 @@ input:focus-visible {
     border-bottom-color: var(--dark-gray) !important;
 }
 
+.table-striped>tbody>tr:nth-of-type(odd) {
+    --bs-table-accent-bg: transparent !important;
+    color: var(--bs-table-striped-color);
+}
 
 
 .cursor_pointer {
@@ -281,9 +289,11 @@ input:focus-visible {
     width: 10px;
     height: 12px;
 }
+
 .show {
     display: block;
 }
+
 .hide {
     display: none;
 }
