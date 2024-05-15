@@ -1,11 +1,17 @@
 // toggle button
-
 function toggleButton(activeButtonId, disabledButtonId) {
+  // Get references to the active and disabled buttons
   var activeButton = document.getElementById(activeButtonId);
   var disabledButton = document.getElementById(disabledButtonId);
+
+  // Call toggleSecondRow function (assuming it's defined elsewhere)
   toggleSecondRow();
+
+  // Check if the activeButton does not already have the "active" class
   if (!activeButton.classList.contains("active")) {
+    // If not, add the "active" class to the activeButton
     activeButton.classList.add("active");
+    // Remove the "active" class from the disabledButton
     disabledButton.classList.remove("active");
   }
 }

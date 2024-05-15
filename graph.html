@@ -90,16 +90,16 @@
                 </button>
                 <button
                   type="button"
-                  class="btn light_white_bg py-1 ms-1 fw_medium text_md text_light_orange border_radius_full"
+                  class="btn light_white_bg py-1 ms-1 fw_medium text_md text_light_black border_radius_full"
                 >
                   Pay-Off Table
                 </button>
               </div>
               <div class="d-flex flex-column gap-2 mt-2 pt-1">
                 <div class="d-flex align-items-center gap-3">
-                  <span class="fw-normal text_sm text_light_black d-flex"
-                    >Legends :
-                  </span>
+                  <p class="fw-normal text_sm text_light_black d-flex text-uppercase"
+                    >Legends : 
+                  </p>
                   <div class="d-flex gap-2">
                     <h2 class="fw-normal text_sm text_light_black d-flex gap-1">
                       <span class="green_line d-flex"></span>-1sd & +1sd
@@ -113,9 +113,9 @@
                   </div>
                 </div>
                 <div class="d-flex align-items-center gap-3 mt-1">
-                  <span class="fw-normal text_sm text_light_black d-flex"
+                  <p class="fw-normal text_sm text_light_black d-flex text-uppercase"
                     >Levels :
-                  </span>
+                  </p>
                   <div class="d-flex gap-2">
                     <h2 class="fw-normal text_sm text_light_black d-flex gap-1">
                       <span class="black_line d-flex"></span>PNL
@@ -136,7 +136,8 @@
               <p
                 class="fw-normal text_sm text_light_black d-flex align-items-center justify-content-center text-center mt-2"
               >
-                Today’s Payoff <span class="orange_line d-flex"></span> Expiry
+                Today’s Payoff
+                <span class="orange_line_strikes d-flex mx-2"></span> Expiry
                 Payoff
               </p>
             </div>
@@ -185,7 +186,7 @@
                   </div>
                   <div class="flex flex-column gap-1 col-6">
                     <h2 class="fw-normal text_md text_gray">
-                      Gamma<img
+                      Gamma<img class="ms-1"
                         src="/assets/image/svg/question-mark.svg"
                         alt="question-mark"
                       />
@@ -196,7 +197,7 @@
                 <div class="d-flex flex-wrap justify-content-between mt-2">
                   <div class="flex flex-column gap-1 col-6">
                     <h2 class="fw-normal text_md text_gray">
-                      Theta<img
+                      Theta<img class="ms-1"
                         src="/assets/image/svg/question-mark.svg"
                         alt="question-mark"
                       />
@@ -205,7 +206,7 @@
                   </div>
                   <div class="flex flex-column gap-1 col-6">
                     <h2 class="fw-normal text_md text_gray">
-                      Vega<img
+                      Vega<img class="ms-1"
                         src="/assets/image/svg/question-mark.svg"
                         alt="question-mark"
                       />
@@ -218,13 +219,27 @@
                 <h2 class="fw_medium text_md text_light_black pt-2">IVs</h2>
                 <div class="d-flex flex-wrap justify-content-between mt-3">
                   <div class="d-flex w-100 justify-content-between gap-1">
-                    <h2 class="fw-normal text_md text_gray">17000</h2>
+                    <h2 class="fw-normal text_md text_light_black">17000</h2>
                     <h2 class="fw-normal text_md text_gray">23 Sep</h2>
                     <div class="d-flex align-items-center value_inc_dcs">
                       <span
                         class="d-flex align-items-center justify-content-center"
-                        >-</span
                       >
+                        <svg
+                          width="12"
+                          height="2"
+                          viewBox="0 0 12 2"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.33325 1H10.6666"
+                            stroke="#353535"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
                       <h2
                         class="fw-normal text_sm text_light_black border_x d-flex px-3"
                       >
@@ -232,20 +247,53 @@
                       </h2>
                       <span
                         class="d-flex align-items-center justify-content-center"
-                        >+</span
                       >
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8 3.33333V12.6667"
+                            stroke="#353535"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M3.33325 8H12.6666"
+                            stroke="#353535"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
                     </div>
                   </div>
                 </div>
                 <div class="d-flex flex-wrap justify-content-between mt-3">
                   <div class="d-flex w-100 justify-content-between gap-1">
-                    <h2 class="fw-normal text_md text_gray">17000</h2>
+                    <h2 class="fw-normal text_md text_light_black">17000</h2>
                     <h2 class="fw-normal text_md text_gray">23 Sep</h2>
                     <div class="d-flex align-items-center value_inc_dcs">
                       <span
                         class="d-flex align-items-center justify-content-center"
-                        >-</span
-                      >
+                        >
+                        <svg
+                          width="12"
+                          height="2"
+                          viewBox="0 0 12 2"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1.33325 1H10.6666"
+                            stroke="#353535"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          /></svg
+                      ></span>
                       <h2
                         class="fw-normal text_sm text_light_black border_x d-flex px-3"
                       >
@@ -253,8 +301,26 @@
                       </h2>
                       <span
                         class="d-flex align-items-center justify-content-center"
-                        >+</span
-                      >
+                        ><svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8 3.33333V12.6667"
+                            stroke="#353535"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M3.33325 8H12.6666"
+                            stroke="#353535"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          /></svg
+                      ></span>
                     </div>
                   </div>
                 </div>
@@ -274,22 +340,22 @@
               </div>
               <div>
                 <h2 class="fw-normal text_md text_light_black">
-                  Required Margin
+                  Available Limit
                   <img src="/assets/image/svg/info-icon.svg" alt="info" />
                 </h2>
-                <p class="fw_medium text_base text_light_black">₹3794.50</p>
+                <p class="fw_medium text_base text_light_black">₹5600.00</p>
               </div>
             </div>
             <div class="d-flex gap-3">
               <button
                 type="button"
-                class="btn border_green text_green fw_medium text_base p-2 transition_03"
+                class="btn border_green text_green fw_medium text_base save_btn transition_03"
               >
                 Save
               </button>
               <button
                 type="button"
-                class="btn border_green text_green fw_medium text_base p-2 transition_03"
+                class="btn border_green text_green fw_medium text_base order_btn transition_03"
               >
                 Place Order
               </button>

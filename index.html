@@ -23,9 +23,9 @@
           <span class="fw-normal text_md text_light_black">(4/50)</span>
         </div>
         <div class="d-flex flex-wrap gap-3 align-items-center mt-3 mt-lg-0">
-          <div class="header_responsive flex-wrap">
-            <div class="d-flex flex-column py-4 py-sm-0 flex-sm-row gap-2">
-              <button  type="button"
+          <div class="header_responsive flex-wrap align-items-center">
+            <div class="d-flex flex-column justify-content-center align-items-center py-4 py-sm-0 flex-sm-row gap-2">
+              <button  style="height: 35px;"  type="button"
                 class="btn orange_border text_light_orange fw_medium text_xs px-2">
                 Upload CSV
                 <img class="ms-2 ps-1" src="./assets/image/svg/upload-icon.svg" alt="upload-icon" />
@@ -102,13 +102,15 @@
                 <td>
                   <select name="date" class=" fw-medium text_md text_light_black">
                     <option value="20-FEB-2024">20-FEB-2024</option>
+                    <option value="20-FEB-2024">20-FEB-2024</option>
+                    <option value="20-FEB-2024">20-FEB-2024</option>
                   </select>
                 </td>
                 <td>
-                  <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+                  <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
                     <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
                         alt="decrease-icon"></span>
-                    <span id="counter" class=fw-medium text_md text_light_black">22000</span>
+                    <span id="counter" class="fw-medium text_md text_light_black">22000</span>
                     <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
                         alt="decrease-icon"></span>
                   </div>
@@ -117,7 +119,7 @@
                   <span class="rounded-1 light_green text_md fw-normal green_border mb-0">CE</span>
                 </td>
                 <td>
-                  <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+                  <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
                     <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
                         alt="decrease-icon"></span>
                     <span id="counter" class="fw-medium text_md text_light_black">1000</span>
@@ -139,8 +141,8 @@
                       </div>
 
                     </div>
-                    <div style="width: 130px;"
-                      class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+                    <div style="width: 130px;height: 35px; height: 35px;"
+                      class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
                       <span class="p-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
                           alt="decrease-icon"></span>
                       <span id="counter">400.50</span>
@@ -165,7 +167,8 @@
               </td>
               <td>
                 <div class="d-flex align-items-center gap-2">
-                  <span><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <span>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M8.83262 9.82943C8.64542 9.70777 8.48401 9.55043 8.35762 9.36638C8.23123 9.18234 8.14233 8.9752 8.096 8.7568C8.04967 8.5384 8.04681 8.31301 8.08759 8.0935C8.12837 7.874 8.21199 7.66467 8.33367 7.47748L10.1875 4.62743C10.3072 4.436 10.4639 4.27034 10.6483 4.1401C10.8327 4.00987 11.0412 3.91767 11.2617 3.8689C11.4821 3.82013 11.7101 3.81576 11.9322 3.85604C12.1544 3.89632 12.3663 3.98045 12.5556 4.10351C12.7448 4.22658 12.9077 4.38612 13.0347 4.57281C13.1616 4.75951 13.2501 4.96963 13.295 5.1909C13.3399 5.41217 13.3402 5.64016 13.296 5.86156C13.2518 6.08297 13.164 6.29335 13.0376 6.48043L11.1846 9.33133C10.9387 9.70927 10.5528 9.97406 10.1118 10.0675C9.67068 10.1609 9.21056 10.0753 8.83262 9.82943ZM6.75692 10.0011C6.47157 9.4648 6.33518 8.86179 6.36194 8.25487C6.3887 7.64794 6.57763 7.05927 6.90907 6.55013L8.76207 3.70008C9.25374 2.94409 10.0256 2.41438 10.9078 2.22747C11.3447 2.13493 11.7954 2.12933 12.2344 2.211C12.6734 2.29267 13.0921 2.46001 13.4664 2.70346C13.8407 2.94691 14.1634 3.26171 14.4161 3.62988C14.6688 3.99805 14.8465 4.41238 14.939 4.84921C15.0315 5.28605 15.0371 5.73684 14.9555 6.17584C14.8738 6.61484 14.7065 7.03345 14.463 7.40778L12.61 10.2578C12.2876 10.754 11.8412 11.1574 11.3151 11.4283C10.789 11.6991 10.2013 11.8279 9.61012 11.8019C9.01895 11.776 8.44479 11.5963 7.94438 11.2804C7.44398 10.9646 7.03467 10.5236 6.75692 10.0011Z"
                         fill="#353535" />
@@ -203,15 +206,15 @@
             <span class="py-2 px-3 bg_green rounded-1 text-white text_md fw-normal d-inline-block">B</span>
           </td>
           <td>
-            <select name="date" class=fw-medium text_md text_light_black">
+            <select name="date" class="fw-medium text_md text_light_black">
               <option value="20-FEB-2024">20-FEB-2024</option>
             </select>
           </td>
           <td>
-            <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+            <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
               <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
                   alt="decrease-icon"></span>
-              <span id="counter" class=fw-medium text_md text_light_black">22000</span>
+              <span id="counter" class="fw-medium text_md text_light_black">22000</span>
               <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
                   alt="decrease-icon"></span>
             </div>
@@ -220,10 +223,10 @@
             <span class="rounded-1 light_green text_md fw-normal green_border mb-0">CE</span>
           </td>
           <td>
-            <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+            <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
               <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
                   alt="decrease-icon"></span>
-              <span id="counter" class=fw-medium text_md text_light_black">1000</span>
+              <span id="counter" class="fw-medium text_md text_light_black">1000</span>
               <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
                   alt="decrease-icon"></span>
             </div>
@@ -234,16 +237,16 @@
 
                 <div class="d-flex gap-1">
                   <input type="radio" name="mkt" id="mkt">
-                  <label for="mkt" class=text_xs fw-normal">Mkt.</label>
+                  <label for="mkt" class="text_xs fw-normal">Mkt.</label>
                 </div>
                 <div class="d-flex gap-1">
                   <input type="radio" name="mkt" id="lim">
-                  <label for="lim" class=text_xs fw-normal">Lim.</label>
+                  <label for="lim" class="text_xs fw-normal">Lim.</label>
                 </div>
 
               </div>
-              <div style="width: 130px;"
-                class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+              <div style="width: 130px;height: 35px;"
+                class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
                 <span class="p-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
                     alt="decrease-icon"></span>
                 <span id="counter">400.50</span>
@@ -311,10 +314,10 @@
           </select>
         </td>
         <td>
-          <div class="d-flex border border-light_gray bg_darkGray rounded-2 align-items-center justify-content-around">
+          <div style="height: 35px;" class="d-flex border border-light_gray bg_darkGray rounded-2 align-items-center justify-content-around">
             <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
                 alt="decrease-icon"></span>
-            <span id="counter" class=fw-medium text_md text_light_black">22000</span>
+            <span id="counter" class="fw-medium text_md text_light_black">22000</span>
             <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
                 alt="decrease-icon"></span>
           </div>
@@ -323,19 +326,19 @@
           <span class="rounded-1 light_green bg_darkGray text_md fw-normal green_border mb-0">CE</span>
         </td>
         <td>
-          <div class="d-flex border border-light_gray bg_darkGray rounded-2 align-items-center justify-content-around">
+          <div  style="height: 35px;" class="d-flex border border-light_gray bg_darkGray rounded-2 align-items-center justify-content-around">
             <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
                 alt="decrease-icon"></span>
-            <span id="counter" class=fw-medium text_md text_light_black">1000</span>
+            <span id="counter" class="fw-medium text_md text_light_black">1000</span>
             <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
                 alt="decrease-icon"></span>
           </div>
         </td>
         <td>
-          <div class="d-flex align-items-center gap-2">
+          <div  style="height: 35px;" class="d-flex align-items-center gap-2">
             <span class="fw-normal text_md text_gray">SLTP</span>
-            <div style="width: 130px;"
-              class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+            <div style="width: 130px;height: 35px;"
+              class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
               <span class="p-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
                   alt="decrease-icon"></span>
               <span id="counter">350.00</span>
@@ -346,7 +349,7 @@
       </div>
       </td>
       <td>
-        <div class="d-flex gap-3 align-items-center ms-1">
+        <div  style="height: 35px;" class="d-flex gap-3 align-items-center ms-1">
           <span class="fw-normal text_md text_gray text-nowrap"> Limit Price</span>
           <span style="width: 130px;"
             class="fw_medium text-center text_md text_light_black px-4 py-2 prize_limit">350.00</span>
@@ -364,15 +367,15 @@
         <span class="py-2 px-3 bg_green rounded-1 text-white text_md fw-normal d-inline-block">B</span>
       </td>
       <td>
-        <select name="date" class=fw-medium text_md text_light_black">
+        <select name="date" class="fw-medium text_md text_light_black">
           <option value="20-FEB-2024">20-FEB-2024</option>
         </select>
       </td>
       <td>
-        <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+        <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
           <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
               alt="decrease-icon"></span>
-          <span id="counter" class=fw-medium text_md text_light_black">22000</span>
+          <span id="counter" class="fw-medium text_md text_light_black">22000</span>
           <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
               alt="decrease-icon"></span>
         </div>
@@ -381,10 +384,10 @@
         <span class="rounded-1 light_green text_md fw-normal green_border mb-0">CE</span>
       </td>
       <td>
-        <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+        <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
           <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
               alt="decrease-icon"></span>
-          <span id="counter" class=fw-medium text_md text_light_black">1000</span>
+          <span id="counter" class="fw-medium text_md text_light_black">1000</span>
           <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
               alt="decrease-icon"></span>
         </div>
@@ -395,16 +398,16 @@
 
             <div class="d-flex gap-1">
               <input type="radio" name="mkt" id="mkt">
-              <label for="mkt" class=text_xs fw-normal">Mkt.</label>
+              <label for="mkt" class="text_xs fw-normal">Mkt.</label>
             </div>
             <div class="d-flex gap-1">
               <input type="radio" name="mkt" id="lim">
-              <label for="lim" class=text_xs fw-normal">Lim.</label>
+              <label for="lim" class="text_xs fw-normal">Lim.</label>
             </div>
 
           </div>
-          <div style="width: 130px;"
-            class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+          <div style="width: 130px; height: 35px;"
+            class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
             <span class="p-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
                 alt="decrease-icon"></span>
             <span id="counter">400.50</span>
@@ -428,7 +431,8 @@
     </td>
     <td>
       <div class="d-flex align-items-center gap-2">
-        <span><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span>
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M8.83262 9.82943C8.64542 9.70777 8.48401 9.55043 8.35762 9.36638C8.23123 9.18234 8.14233 8.9752 8.096 8.7568C8.04967 8.5384 8.04681 8.31301 8.08759 8.0935C8.12837 7.874 8.21199 7.66467 8.33367 7.47748L10.1875 4.62743C10.3072 4.436 10.4639 4.27034 10.6483 4.1401C10.8327 4.00987 11.0412 3.91767 11.2617 3.8689C11.4821 3.82013 11.7101 3.81576 11.9322 3.85604C12.1544 3.89632 12.3663 3.98045 12.5556 4.10351C12.7448 4.22658 12.9077 4.38612 13.0347 4.57281C13.1616 4.75951 13.2501 4.96963 13.295 5.1909C13.3399 5.41217 13.3402 5.64016 13.296 5.86156C13.2518 6.08297 13.164 6.29335 13.0376 6.48043L11.1846 9.33133C10.9387 9.70927 10.5528 9.97406 10.1118 10.0675C9.67068 10.1609 9.21056 10.0753 8.83262 9.82943ZM6.75692 10.0011C6.47157 9.4648 6.33518 8.86179 6.36194 8.25487C6.3887 7.64794 6.57763 7.05927 6.90907 6.55013L8.76207 3.70008C9.25374 2.94409 10.0256 2.41438 10.9078 2.22747C11.3447 2.13493 11.7954 2.12933 12.2344 2.211C12.6734 2.29267 13.0921 2.46001 13.4664 2.70346C13.8407 2.94691 14.1634 3.26171 14.4161 3.62988C14.6688 3.99805 14.8465 4.41238 14.939 4.84921C15.0315 5.28605 15.0371 5.73684 14.9555 6.17584C14.8738 6.61484 14.7065 7.03345 14.463 7.40778L12.61 10.2578C12.2876 10.754 11.8412 11.1574 11.3151 11.4283C10.789 11.6991 10.2013 11.8279 9.61012 11.8019C9.01895 11.776 8.44479 11.5963 7.94438 11.2804C7.44398 10.9646 7.03467 10.5236 6.75692 10.0011Z"
               fill="#353535" />
@@ -468,13 +472,14 @@
       <td>
         <select name="date" class="fw-medium text_md text_light_black">
           <option value="20-FEB-2024">20-FEB-2024</option>
+          <option value="20-FEB-2024">20-FEB-2024</option>
         </select>
       </td>
       <td>
-        <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+        <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
           <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
               alt="decrease-icon"></span>
-          <span id="counter" class=fw-medium text_md text_light_black">22000</span>
+          <span id="counter" class="fw-medium text_md text_light_black">22000</span>
           <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
               alt="decrease-icon"></span>
         </div>
@@ -483,10 +488,10 @@
         <span class="rounded-1 light_green text_md fw-normal green_border mb-0">CE</span>
       </td>
       <td>
-        <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+        <div class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
           <span class="px-1 py-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
               alt="decrease-icon"></span>
-          <span id="counter" class=fw-medium text_md text_light_black">1000</span>
+          <span id="counter" class="fw-medium text_md text_light_black">1000</span>
           <span class="px-1 py-2" onclick="incrementCounter()"><img src="/assets/image/svg/Plus.svg"
               alt="decrease-icon"></span>
         </div>
@@ -497,16 +502,16 @@
 
             <div class="d-flex gap-1">
               <input type="radio" name="mkt" id="mkt">
-              <label for="mkt" class=text_xs fw-normal">Mkt.</label>
+              <label for="mkt" class="text_xs fw-normal">Mkt.</label>
             </div>
             <div class="d-flex gap-1">
               <input type="radio" name="mkt" id="lim">
-              <label for="lim" class=text_xs fw-normal">Lim.</label>
+              <label for="lim" class="text_xs fw-normal">Lim.</label>
             </div>
 
           </div>
-          <div style="width: 130px;"
-            class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around">
+          <div style="width: 130px; height: 35px; height: 35px;"
+            class="d-flex border border-light_gray rounded-2 align-items-center justify-content-around " style="height: 35px;">
             <span class="p-2" onclick="decrementCounter()"><img src="/assets/image/svg/minus.svg"
                 alt="decrease-icon"></span>
             <span id="counter">400.50</span>

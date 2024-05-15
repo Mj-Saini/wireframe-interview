@@ -482,13 +482,17 @@ select {
 }
 
 .yellow_line {
-    border-bottom: 2px #EAB222;
+    border-bottom: 2px solid #EAB222;
     width: 10px;
     height: 12px;
 }
-
+.orange_line_strikes{
+    background-color: #EAB222;
+    width: 12px;
+    border:2px solid #EAB222
+}
 .black_line {
-    border-bottom: 2px #353535;
+    border-bottom: 2px solid #353535 !important;
     width: 10px;
     height: 12px;
 }
@@ -500,6 +504,15 @@ select {
 .hide {
     display: none;
 }
+.save_btn{
+ width:67px;
+ height: 43px;
+}
+.order_btn{
+    width: 116px;
+    height: 43px;
+   }
+@media (min-width:1198px) {
 
 
 .header_responsive {
@@ -528,7 +541,7 @@ select {
 .cross {
     display: none !important;
 }
-
+}
 svg {
     cursor: pointer;
 }
@@ -565,5 +578,14 @@ svg {
 @media (min-width:1199.98px) {
     .container_custom {
         max-width: 1140px !important;
+    }
+}
+@media (max-width:576px){
+    :root {
+        /* ==== FONT-SIZES ==== */
+        --font-xs: 8px;
+        --font-sm: 9px;
+        --font-md: 10px;
+        --font-base: 12px;
     }
 }
