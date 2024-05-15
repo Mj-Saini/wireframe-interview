@@ -298,7 +298,64 @@ input:focus-visible {
     display: none;
 }
 
-@media (min-width:1198px) {
+
+.header_responsive {
+    position: fixed;
+    top: -50%;
+    left: 0%;
+    background: white;
+    min-height: 100px;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header_show {
+    position: fixed;
+    left: 0 !important;
+    top: 100px !important;
+
+
+}
+
+.cross {
+    display: none !important;
+}
+
+@media (min-width:574.98px) {
+    .header_responsive {
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        background: white;
+        min-height: 100px;
+        width: 100%;
+        z-index: 10;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+@media (min-width:991.98px) {
+    .header_responsive {
+        position: unset;
+        background: transparent;
+        min-height: unset;
+        width: unset;
+        z-index: 10;
+        display: unset;
+        flex-direction: row !important;
+    }
+}
+
+@media (min-width:1199.98px) {
     .container_custom {
         max-width: 1140px !important;
     }
