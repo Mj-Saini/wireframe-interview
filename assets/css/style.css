@@ -154,7 +154,9 @@ body {
 .border_radius_full {
     border-radius: 1000px !important;
 }
-
+#specifyColor {
+    accent-color: green;
+}
 .border_l {
     border-left: 1px solid #DCDCDC
 }
