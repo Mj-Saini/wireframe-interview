@@ -91,6 +91,30 @@
     background: var(--green) !important;
 }
 
+.bg_orange {
+    background: var(--orange) !important;
+}
+
+.btn-toggle-normal {
+    cursor: pointer;
+    border-radius: 999px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    border: 2px solid transparent !important;
+}
+
+.btn-toggle-normal.active {
+    color: white !important;
+    background: var(--green) !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+}
+
+.border_product {
+    border-radius: 999px !important;
+    border: 1px solid #80878E !important;
+}
+
 .btn-toggle {
     cursor: pointer;
     border-radius: 8px !important;
@@ -148,10 +172,8 @@
     border-right: 0.5px solid #80878E
 }
 
-;
-
 ::-webkit-scrollbar {
-    display: none;
+    display: none !important;
 }
 
 .custom_width {
@@ -251,16 +273,6 @@ input:focus-visible {
     height: 12px;
 }
 
-.chart-container {
-    position: relative;
-    width: 100%;
-    margin: auto;
-}
-
-#myChart {
-    width: 90%;
-    height: 100%;
-}
 
 @media (min-width:1198px) {
     .container_custom {
