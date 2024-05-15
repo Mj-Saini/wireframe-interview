@@ -251,6 +251,17 @@ input:focus-visible {
     height: 12px;
 }
 
+.chart-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+#myChart {
+    width: 90%;
+    height: 100%;
+}
+
 @media (min-width:1198px) {
     .container_custom {
         max-width: 1140px !important;

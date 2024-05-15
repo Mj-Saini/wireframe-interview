@@ -7,3 +7,4 @@ function toggleButton(activeButtonId, disabledButtonId) {
     disabledButton.classList.remove("active");
   }
 }
+
