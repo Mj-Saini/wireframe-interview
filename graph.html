@@ -26,44 +26,52 @@
             <span class="fw-normal text_md text_light_black">(4/50)</span>
           </div>
           <div class="d-flex flex-wrap gap-3 align-items-center mt-3 mt-lg-0">
-            <button
-              type="button"
-              class="btn orange_border text_light_orange fw_medium text_xs p-2"
-            >
-              Upload CSV
-              <img
-                class="ms-2 ps-1"
-                src="./assets/image/svg/upload-icon.svg"
-                alt="upload-icon"
-              />
-            </button>
-
-            <input
-              class="p-2 border rounded-3 fw-normal text_md text_gray"
-              type="search"
-              class="form-control"
-              placeholder="Search For Contract"
-              aria-label="Search For Contract"
-            />
-
-            <div class="btn-group p-1 border_wireframe light_white_bg">
-              <button
-                id="button1"
-                type="button"
-                class="btn btn-toggle active"
-                onclick="toggleButton('button1', 'button2')"
+            <div class="header_responsive">
+              <div
+                class="d-flex flex-column justify-content-center align-items-center py-4 py-sm-0 flex-sm-row gap-2"
               >
-                Basket
-              </button>
-              <button
-                id="button2"
-                type="button"
-                class="btn btn-toggle"
-                onclick="toggleButton('button2', 'button1')"
-              >
-                Pay-off Analyzer
-              </button>
+                <button
+                  style="height: 35px"
+                  type="button"
+                  class="btn orange_border text_light_orange fw_medium text_xs px-2"
+                >
+                  Upload CSV
+                  <img
+                    class="ms-2 ps-1"
+                    src="./assets/image/svg/upload-icon.svg"
+                    alt="upload-icon"
+                  />
+                </button>
+
+                <input
+                  class="p-2 border rounded-3 fw-normal text_md text_gray"
+                  type="search"
+                  class="form-control"
+                  placeholder="Search For Contract"
+                  aria-label="Search For Contract"
+                />
+
+                <div class="btn-group p-1 border_wireframe light_white_bg">
+                  <button
+                    id="button1"
+                    type="button"
+                    class="btn btn-toggle active"
+                    onclick="toggleButton('button1', 'button2')"
+                  >
+                    Basket
+                  </button>
+                  <button
+                    id="button2"
+                    type="button"
+                    class="btn btn-toggle"
+                    onclick="toggleButton('button2', 'button1')"
+                  >
+                    Pay-off Analyzer
+                  </button>
+                </div>
+              </div>
             </div>
+
             <div class="d-flex align-items-center gap-2">
               <img
                 class="cursor_pointer"
@@ -76,6 +84,34 @@
                 alt="cross-icon"
               />
             </div>
+            <div
+              id="menuBar"
+              style="width: 20px; height: 15px"
+              class="d-flex flex-column justify-content-between cursor_pointer d-lg-none"
+            >
+              <span
+                id="line1"
+                style="border: 2px solid black"
+                class="d-flex rounded-3"
+              ></span>
+              <span
+                id="line2"
+                style="border: 2px solid black"
+                class="d-flex rounded-3"
+              ></span>
+              <span
+                id="line3"
+                style="border: 2px solid black"
+                class="d-flex rounded-3"
+              ></span>
+            </div>
+            <img
+              id="menuIcon"
+              :class="cursor_pointer"
+              src="/assets/image/svg/cross-icon.svg"
+              alt="Menu"
+              class="d-none"
+            />
           </div>
         </div>
         <div class="row flex-wrap border_wireframe rounded-0">
@@ -97,8 +133,10 @@
               </div>
               <div class="d-flex flex-column gap-2 mt-2 pt-1">
                 <div class="d-flex align-items-center gap-3">
-                  <p class="fw-normal text_sm text_light_black d-flex text-uppercase"
-                    >Legends : 
+                  <p
+                    class="fw-normal text_sm text_light_black d-flex text-uppercase"
+                  >
+                    Legends :
                   </p>
                   <div class="d-flex gap-2">
                     <h2 class="fw-normal text_sm text_light_black d-flex gap-1">
@@ -113,8 +151,10 @@
                   </div>
                 </div>
                 <div class="d-flex align-items-center gap-3 mt-1">
-                  <p class="fw-normal text_sm text_light_black d-flex text-uppercase"
-                    >Levels :
+                  <p
+                    class="fw-normal text_sm text_light_black d-flex text-uppercase"
+                  >
+                    Levels :
                   </p>
                   <div class="d-flex gap-2">
                     <h2 class="fw-normal text_sm text_light_black d-flex gap-1">
@@ -186,7 +226,8 @@
                   </div>
                   <div class="flex flex-column gap-1 col-6">
                     <h2 class="fw-normal text_md text_gray">
-                      Gamma<img class="ms-1"
+                      Gamma<img
+                        class="ms-1"
                         src="/assets/image/svg/question-mark.svg"
                         alt="question-mark"
                       />
@@ -197,7 +238,8 @@
                 <div class="d-flex flex-wrap justify-content-between mt-2">
                   <div class="flex flex-column gap-1 col-6">
                     <h2 class="fw-normal text_md text_gray">
-                      Theta<img class="ms-1"
+                      Theta<img
+                        class="ms-1"
                         src="/assets/image/svg/question-mark.svg"
                         alt="question-mark"
                       />
@@ -206,7 +248,8 @@
                   </div>
                   <div class="flex flex-column gap-1 col-6">
                     <h2 class="fw-normal text_md text_gray">
-                      Vega<img class="ms-1"
+                      Vega<img
+                        class="ms-1"
                         src="/assets/image/svg/question-mark.svg"
                         alt="question-mark"
                       />
@@ -279,7 +322,7 @@
                     <div class="d-flex align-items-center value_inc_dcs">
                       <span
                         class="d-flex align-items-center justify-content-center"
-                        >
+                      >
                         <svg
                           width="12"
                           height="2"

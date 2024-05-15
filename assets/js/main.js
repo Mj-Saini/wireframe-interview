@@ -1,19 +1,15 @@
-// toggle button
 function toggleButton(activeButtonId, disabledButtonId) {
-  // Get references to the active and disabled buttons
-  var activeButton = document.getElementById(activeButtonId);
-  var disabledButton = document.getElementById(disabledButtonId);
+  const activeButton = document.getElementById(activeButtonId);
+  const disabledButton = document.getElementById(disabledButtonId);
 
-  // Call toggleSecondRow function (assuming it's defined elsewhere)
-  toggleSecondRow();
-
-  // Check if the activeButton does not already have the "active" class
-  if (!activeButton.classList.contains("active")) {
-    // If not, add the "active" class to the activeButton
-    activeButton.classList.add("active");
-    // Remove the "active" class from the disabledButton
-    disabledButton.classList.remove("active");
+  // If the active button is already active, do nothing
+  if (activeButton.classList.contains("active")) {
+    return;
   }
+
+  // Toggle active class for buttons
+  activeButton.classList.add("active");
+  disabledButton.classList.remove("active");
 }
 
 // radio button
